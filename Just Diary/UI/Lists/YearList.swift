@@ -14,12 +14,24 @@ struct YearList: View {
     var body: some View {
         NavigationView {
             List(
-                AppState.shared.getYears()
-            ) { year in
-                NavigationLink {
-                    MonthList(title: year.name)
-                } label: {
-                    Text(year.name)
+                UseCases.shared.getYearsListWithMonth(),
+                children: \.months
+            ) { item in
+                if item.months != nil {
+                    Text(item.name)
+                } else {
+                    NavigationLink {
+                        DayList(
+                            title: "\(item.name) \(item.year)",
+                            days: UseCases.shared.getDaysList(
+                                forMonth: item.name,
+                                andYear: item.year
+                            )
+                        )
+                        Text("")
+                    } label: {
+                        Text(item.name)
+                    }
                 }
             }
             .navigationTitle(R.string.yearList.title)

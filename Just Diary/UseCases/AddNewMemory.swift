@@ -8,7 +8,7 @@
 import Foundation
 
 extension UseCases {
-    public static func addNewMemory(_ name: String? = nil, message: String, date: Date) {
+    public func addNewMemory(_ name: String? = nil, message: String, date: Date) {
         
     }
 }

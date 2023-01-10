@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "UseCases.getDaysList(forMonth:andYear:):GetDaysList.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "UseCases.shared.getMonthFromDate(memories[0].date)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

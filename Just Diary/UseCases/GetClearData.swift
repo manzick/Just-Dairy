@@ -8,14 +8,9 @@
 import Foundation
 
 extension UseCases {
-    public static func getClearData(day: String, month: String) -> String {
+    public func getClearDayName(byDate date: Date) -> String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "MM/dd"
-        if let date = formatter.date(from: "\(month)/\(day)") {
-            formatter.dateFormat = "dd MMMM"
-            return formatter.string(from: date)
-        } else {
-            return "\(day)/\(month)"
-        }
+        formatter.dateFormat = "dd MMMM"
+        return formatter.string(from: date)
     }
 }

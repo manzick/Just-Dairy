@@ -15,6 +15,3 @@ struct Just_DiaryApp: App {
         }
     }
 }
-
-public class R {}
-public class UseCases {}
