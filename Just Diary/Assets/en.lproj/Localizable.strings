@@ -1,0 +1,31 @@
+/*
+ Localizable.strings
+ CarrotApp
+ 
+ Created by Ilya Chadov on 23/07/2018.
+ Copyright © 2018 Beetlesoft. All rights reserved.
+ */
+
+
+"language" = "En";
+
+/* Year List ================================================== */
+"Just Dairy" = "Just Dairy";
+"newMemory.Save" = "Save";
+/* ============================================================ */
+
+/* New Memory ================================================= */
+"New memory" = "New memory";
+/* ============================================================ */
+
+/* About Developer ============================================ */
+"About Developer" = "About Developer";
+"Source link" = "Source link";
+/* ============================================================ */
+
+/* Settings =================================================== */
+"Settings" = "Settings";
+"Backup to iCloud (now to files)" = "Backup to iCloud (now to files)";
+"Load" = "Load";
+"Save" = "Save";
+/* ============================================================ */

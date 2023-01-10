@@ -11,7 +11,10 @@ import SwiftUI
 struct Just_DiaryApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            YearList()
         }
     }
 }
+
+public class R {}
+public class UseCases {}
