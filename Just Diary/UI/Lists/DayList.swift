@@ -9,17 +9,21 @@ import SwiftUI
 
 struct DayList: View {
     @State private var days = [
-        Day(name: "Мудрость из неизвестного источника", year: 2022, month: 02, day: 15, message: "Привет"),
-        Day(name: "Hello world 2", year: 2022, month: 02, day: 16, message: "Привет 2")
+        Day(title: "Мудрость из неизвестного источника", year: "2022", month: "02", day: "15", message: "Привет"),
+        Day(title: "Hello world 2", year: "2022", month: "02", day: "16", message: "Привет 2")
     ]
-    @State public var title: String
+    @State public var year: String
+    @State public var month: String
     
-    init(title: String) {
-        self.title = title
+    init(title: String, year: String) {
+        self.month = title
+        self.year = year
     }
 
     var body: some View {
-        List(days) { day in
+        List(
+            AppState.shared.getDays(forYear: year, andMonth: month)
+        ) { day in
             NavigationLink {
 //                MonthList(title: mob.id)
             } label: {
@@ -33,14 +37,14 @@ struct DayList: View {
                 )
             }
         }
-        .navigationTitle(title)
+        .navigationTitle(month)
     }
 }
 
 struct DayList_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            DayList(title: "Name of the month")
+            DayList(title: "Name of the month", year: "")
         }
     }
 }

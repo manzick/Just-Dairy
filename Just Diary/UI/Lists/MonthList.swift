@@ -8,33 +8,31 @@
 import SwiftUI
 
 struct MonthList: View {
-    @State private var months = [
-        Month(id: "Январь"),
-        Month(id: "Февраль"),
-        Month(id: "Март")
-    ]
-    @State public var title: String
+
+    @State public var year: String
     
     init(title: String) {
-        self.title = title
+        self.year = title
     }
 
     var body: some View {
-        List(months) { month in
+        List(
+            AppState.shared.getMonths(forYear: year)
+        ) { month in
             NavigationLink {
-                DayList(title: month.id)
+                DayList(title: month.name, year: year)
             } label: {
-                Text(month.id)
+                Text(month.name)
             }
         }
-        .navigationTitle(title)
+        .navigationTitle(year)
     }
 }
 
 struct MonthList_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            MonthList(title: "Name of the year")
+            MonthList(title: "2022")
         }
     }
 }

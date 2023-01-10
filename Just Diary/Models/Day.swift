@@ -11,19 +11,19 @@ struct Day: Identifiable {
     
     let id: String
     let name: String
-    let year: Int
-    let month: Int
-    let day: Int
+    let year: String
+    let month: String
+    let day: String
     let message: String
     
     public init(
-        name: String = "Без имени",
-        year: Int,
-        month: Int,
-        day: Int,
+        title: String = R.string.model.noName,
+        year: String,
+        month: String,
+        day: String,
         message: String
     ) {
-        self.name = name
+        self.name = title
         self.year = year
         self.month = month
         self.day = day

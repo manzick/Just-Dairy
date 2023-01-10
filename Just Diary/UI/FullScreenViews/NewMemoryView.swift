@@ -11,20 +11,20 @@ struct NewMemoryView: View {
     
     @Environment(\.presentationMode) var presentationMode
     
-    @State var name = ""
+    @State var title = ""
     @State var message = ""
-    @State private var todayDate = Date.now
+    @State private var datePickerDate = Date.now
 
     var body: some View {
         NavigationView {
             List {
                 Section{
                     TextField(
-                        "Type name of memory",
-                        text: $name
+                        "Type title of memory",
+                        text: $title
                     )
                     DatePicker(
-                        selection: $todayDate,
+                        selection: $datePickerDate,
                         in: ...Date.now,
                         displayedComponents: .date) {
                             Text("Select a date")

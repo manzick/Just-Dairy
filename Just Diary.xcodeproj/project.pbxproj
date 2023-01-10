@@ -17,6 +17,8 @@
 		B28DB6F12969871D0033DEE8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B28DB6F32969871D0033DEE8 /* Localizable.strings */; };
 		B28DB6F8296987B70033DEE8 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28DB6F7296987B70033DEE8 /* String+Extension.swift */; };
 		B28DB6FA2969ADB90033DEE8 /* NewMemoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28DB6F92969ADB90033DEE8 /* NewMemoryView.swift */; };
+		B2BC896A296D509300B36BD4 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BC8969296D509300B36BD4 /* AppState.swift */; };
+		B2BC896C296D5FE800B36BD4 /* AddNewMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BC896B296D5FE800B36BD4 /* AddNewMemory.swift */; };
 		B2BCE8662966E012001B8388 /* Year.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BCE8652966E012001B8388 /* Year.swift */; };
 		B2BCE8682966E8BD001B8388 /* MonthList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BCE8672966E8BD001B8388 /* MonthList.swift */; };
 		B2BCE86A2966EE22001B8388 /* Month.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BCE8692966EE22001B8388 /* Month.swift */; };
@@ -43,6 +45,8 @@
 		B28DB6F4296987320033DEE8 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B28DB6F7296987B70033DEE8 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		B28DB6F92969ADB90033DEE8 /* NewMemoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMemoryView.swift; sourceTree = "<group>"; };
+		B2BC8969296D509300B36BD4 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		B2BC896B296D5FE800B36BD4 /* AddNewMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewMemory.swift; sourceTree = "<group>"; };
 		B2BCE8652966E012001B8388 /* Year.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Year.swift; sourceTree = "<group>"; };
 		B2BCE8672966E8BD001B8388 /* MonthList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthList.swift; sourceTree = "<group>"; };
 		B2BCE8692966EE22001B8388 /* Month.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Month.swift; sourceTree = "<group>"; };
@@ -92,6 +96,7 @@
 				B2BCE8642966DC02001B8388 /* Models */,
 				B2BCE8632966D900001B8388 /* UI */,
 				B266ECEE295C90FA008F70DB /* Just_DiaryApp.swift */,
+				B2BC8969296D509300B36BD4 /* AppState.swift */,
 				B266ECF4295C90FC008F70DB /* Just_Diary.entitlements */,
 				B266ECF5295C90FC008F70DB /* Preview Content */,
 				B2BCE87C29694288001B8388 /* MainData.xcdatamodeld */,
@@ -185,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				B2BCE87A2967383B001B8388 /* GetClearData.swift */,
+				B2BC896B296D5FE800B36BD4 /* AddNewMemory.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -273,6 +279,7 @@
 				B28DB6F8296987B70033DEE8 /* String+Extension.swift in Sources */,
 				B2BCE87E29694288001B8388 /* MainData.xcdatamodeld in Sources */,
 				B2BCE8682966E8BD001B8388 /* MonthList.swift in Sources */,
+				B2BC896A296D509300B36BD4 /* AppState.swift in Sources */,
 				B28DB6E229695D3C0033DEE8 /* AboutDeveloperView.swift in Sources */,
 				B266ECF1295C90FA008F70DB /* YearList.swift in Sources */,
 				B266ECEF295C90FA008F70DB /* Just_DiaryApp.swift in Sources */,
@@ -283,6 +290,7 @@
 				B2BCE87B2967383B001B8388 /* GetClearData.swift in Sources */,
 				B2BCE86C2966F722001B8388 /* Day.swift in Sources */,
 				B2BCE88129694D95001B8388 /* SettingsView.swift in Sources */,
+				B2BC896C296D5FE800B36BD4 /* AddNewMemory.swift in Sources */,
 				B28DB6E62969817D0033DEE8 /* String.swift in Sources */,
 				B28DB6FA2969ADB90033DEE8 /* NewMemoryView.swift in Sources */,
 				B2BCE8662966E012001B8388 /* Year.swift in Sources */,

@@ -14,6 +14,9 @@ extension R {
             static let manzickTwitterLink = "https://mobile.twitter.com/manzick"
             static let manzickTelegramLink = "https://t.me/manzick"
         }
+        struct model {
+            static let noName = "Untitled".localize()
+        }
         struct yearList {
             static let title = "Just Dairy".localize()
         }

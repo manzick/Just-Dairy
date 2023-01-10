@@ -8,11 +8,13 @@
 import Foundation
 
 struct Year: Identifiable {
+    let title: String
     let name: String
     let id: String
     
-    public init(name: String = "", id: String) {
+    public init(title: String = "", name: String) {
+        self.title = title
         self.name = name
-        self.id = id
+        self.id = name
     }
 }

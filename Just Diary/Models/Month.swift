@@ -8,11 +8,15 @@
 import Foundation
 
 struct Month: Identifiable {
+    let title: String
     let name: String
+    let year: String
     let id: String
     
-    public init(name: String = "", id: String) {
+    public init(title: String = "", name: String, year: String) {
+        self.title = title
         self.name = name
-        self.id = id
+        self.year = year
+        self.id = "\(year)/\(name)"
     }
 }

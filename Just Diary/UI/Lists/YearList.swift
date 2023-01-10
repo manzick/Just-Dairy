@@ -8,20 +8,18 @@
 import SwiftUI
 
 struct YearList: View {
-    @State private var years = [
-        Year(id: "2021"),
-        Year(id: "2022"),
-        Year(id: "2023")
-    ]
+ 
     @State var showNewMemoryModal = false
 
     var body: some View {
         NavigationView {
-            List(years) { year in
+            List(
+                AppState.shared.getYears()
+            ) { year in
                 NavigationLink {
-                    MonthList(title: year.id)
+                    MonthList(title: year.name)
                 } label: {
-                    Text(year.id)
+                    Text(year.name)
                 }
             }
             .navigationTitle(R.string.yearList.title)

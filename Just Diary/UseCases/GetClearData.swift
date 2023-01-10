@@ -8,7 +8,7 @@
 import Foundation
 
 extension UseCases {
-    public static func getClearData(day: Int, month: Int) -> String {
+    public static func getClearData(day: String, month: String) -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "MM/dd"
         if let date = formatter.date(from: "\(month)/\(day)") {

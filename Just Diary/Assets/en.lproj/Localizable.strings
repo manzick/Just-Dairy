@@ -1,27 +1,34 @@
-/*
- Localizable.strings
- CarrotApp
- 
- Created by Ilya Chadov on 23/07/2018.
- Copyright © 2018 Beetlesoft. All rights reserved.
- */
+//
+//  NewMemoryView.swift
+//  Just Diary
+//
+//  Created by Alexander Manzurov on 07.01.2023.
+//
 
 
 "language" = "En";
+
+/* Models ===================================================== */
+"Untitled" = "Untitled";
+/* ============================================================ */
+
 
 /* Year List ================================================== */
 "Just Dairy" = "Just Dairy";
 "newMemory.Save" = "Save";
 /* ============================================================ */
 
+
 /* New Memory ================================================= */
 "New memory" = "New memory";
 /* ============================================================ */
+
 
 /* About Developer ============================================ */
 "About Developer" = "About Developer";
 "Source link" = "Source link";
 /* ============================================================ */
+
 
 /* Settings =================================================== */
 "Settings" = "Settings";
