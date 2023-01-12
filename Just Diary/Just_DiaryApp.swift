@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct Just_DiaryApp: App {
+    let ddm = DatabaseDataManager.shared
     var body: some Scene {
         WindowGroup {
-            YearList()
+            MainList()
         }
     }
 }

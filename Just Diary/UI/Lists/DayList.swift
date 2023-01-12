@@ -36,9 +36,14 @@ struct DayList_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             DayList(
-                title: "January",
+                title: "January 2023",
                 days: [
-                    DayStruct(title: "Заголовок", message: "Сообщение", date: "January 15")
+                    DayStruct(
+                        title: "Заголовок",
+                        message: "Сообщение",
+                        date: "January 15",
+                        id: UUID()
+                    )
                 ]
             )
         }

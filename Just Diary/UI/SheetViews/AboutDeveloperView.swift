@@ -44,6 +44,7 @@ struct AboutDeveloperView: View {
                 
                 Button(action: {
                     print()
+                    //TODO: Добавить ссылку на гитхаб
                 }) {
                     Text(R.string.aboutDeveloper.sourceButton)
                 }
@@ -53,13 +54,9 @@ struct AboutDeveloperView: View {
             .navigationTitle(R.string.aboutDeveloper.title)
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        Button(action: {
-                            self.dismiss()
-                        }) {
-                            Image(systemName: "multiply").imageScale(.large)
-                        }
-                    }
+                    JustCloseToolbar(close: {
+                        self.dismiss()
+                    })
                 }
         }
     }

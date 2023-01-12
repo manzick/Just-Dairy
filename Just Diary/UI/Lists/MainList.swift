@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct YearList: View {
+struct MainList: View {
  
-    @State var showNewMemoryModal = false
+    @ObservedObject private var providingDataManager = ProvidingDataManager.shared
 
     var body: some View {
         NavigationView {
             List(
-                UseCases.shared.getYearsListWithMonth(),
+                providingDataManager.yearsListWithMonth,
                 children: \.months
             ) { item in
                 if item.months != nil {
@@ -23,12 +23,11 @@ struct YearList: View {
                     NavigationLink {
                         DayList(
                             title: "\(item.name) \(item.year)",
-                            days: UseCases.shared.getDaysList(
+                            days: providingDataManager.getDaysList(
                                 forMonth: item.name,
                                 andYear: item.year
                             )
                         )
-                        Text("")
                     } label: {
                         Text(item.name)
                     }
@@ -36,22 +35,7 @@ struct YearList: View {
             }
             .navigationTitle(R.string.yearList.title)
             .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    NavigationLink {
-                        SettingsView()
-                    } label: {
-                        Image(systemName: "gear").imageScale(.large)
-                    }
-                }
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        self.showNewMemoryModal = true
-                    }) {
-                        Image(systemName: "square.and.pencil").imageScale(.large)
-                    }.fullScreenCover(isPresented: $showNewMemoryModal) {
-                        NewMemoryView()
-                    }
-                }
+                MainToolbar()
             }
         }
     }
@@ -59,7 +43,7 @@ struct YearList: View {
 
 struct YearList_Previews: PreviewProvider {
     static var previews: some View {
-        YearList()
+        MainList()
     }
 }
    

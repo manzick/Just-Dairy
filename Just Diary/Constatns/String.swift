@@ -34,5 +34,9 @@ extension R {
             static let title = "New memory".localize()
             static let save = "newMemory.Save".localize()
         }
+        struct newMemoryToolbar {
+            static let exitAlertTitle = "exitAlertTitle".localize()
+            static let exitAlertButton = "exitAlertButton".localize()
+        }
     }
 }

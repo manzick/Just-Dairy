@@ -10,5 +10,16 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "DataManager.getFromDB():DataManager.swift">
+      </ContextState>
+      <ContextState
+         contextName = "Memory.init(fromMemoreObject:):Memory.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "memoryObject.date">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

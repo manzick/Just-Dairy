@@ -7,11 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B21B2189296FD3D30092FFD6 /* ProvidingDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21B2188296FD3D30092FFD6 /* ProvidingDataManager.swift */; };
+		B21B218C296FF9740092FFD6 /* NewMemoryToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21B218B296FF9740092FFD6 /* NewMemoryToolbar.swift */; };
+		B21B218E2970004D0092FFD6 /* JustCloseToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21B218D2970004C0092FFD6 /* JustCloseToolbar.swift */; };
+		B21B2190297001FC0092FFD6 /* MainToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21B218F297001FC0092FFD6 /* MainToolbar.swift */; };
+		B21B2192297004AF0092FFD6 /* SettingsToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21B2191297004AE0092FFD6 /* SettingsToolbar.swift */; };
+		B21B219429703C630092FFD6 /* DatabaseDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21B219329703C630092FFD6 /* DatabaseDataManager.swift */; };
+		B21B2196297042CE0092FFD6 /* JSONDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21B2195297042CE0092FFD6 /* JSONDataManager.swift */; };
+		B21B219B297064EE0092FFD6 /* Just-Diary-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B21B219A297064BF0092FFD6 /* Just-Diary-Info.plist */; };
 		B252B7C7296DBBFE0093DF14 /* GetYearFromDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B252B7C6296DBBFE0093DF14 /* GetYearFromDate.swift */; };
 		B252B7C9296DBCA30093DF14 /* GetMonthFromDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B252B7C8296DBCA30093DF14 /* GetMonthFromDate.swift */; };
-		B252B7CB296DC21F0093DF14 /* GetDaysList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B252B7CA296DC21F0093DF14 /* GetDaysList.swift */; };
+		B252B7D0296ED6860093DF14 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = B252B7CF296ED6860093DF14 /* RxCocoa */; };
+		B252B7D2296ED6860093DF14 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B252B7D1296ED6860093DF14 /* RxSwift */; };
 		B266ECEF295C90FA008F70DB /* Just_DiaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B266ECEE295C90FA008F70DB /* Just_DiaryApp.swift */; };
-		B266ECF1295C90FA008F70DB /* YearList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B266ECF0295C90FA008F70DB /* YearList.swift */; };
+		B266ECF1295C90FA008F70DB /* MainList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B266ECF0295C90FA008F70DB /* MainList.swift */; };
 		B266ECF3295C90FC008F70DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B266ECF2295C90FC008F70DB /* Assets.xcassets */; };
 		B266ECF7295C90FC008F70DB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B266ECF6295C90FC008F70DB /* Preview Assets.xcassets */; };
 		B28DB6E229695D3C0033DEE8 /* AboutDeveloperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28DB6E129695D3C0033DEE8 /* AboutDeveloperView.swift */; };
@@ -20,14 +29,11 @@
 		B28DB6F12969871D0033DEE8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B28DB6F32969871D0033DEE8 /* Localizable.strings */; };
 		B28DB6F8296987B70033DEE8 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28DB6F7296987B70033DEE8 /* String+Extension.swift */; };
 		B28DB6FA2969ADB90033DEE8 /* NewMemoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28DB6F92969ADB90033DEE8 /* NewMemoryView.swift */; };
-		B2BC896A296D509300B36BD4 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BC8969296D509300B36BD4 /* AppState.swift */; };
-		B2BC896C296D5FE800B36BD4 /* AddNewMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BC896B296D5FE800B36BD4 /* AddNewMemory.swift */; };
+		B2BC896A296D509300B36BD4 /* LocalRxDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BC8969296D509300B36BD4 /* LocalRxDataManager.swift */; };
 		B2BC896F296D6D0D00B36BD4 /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BC896E296D6D0D00B36BD4 /* Memory.swift */; };
 		B2BC8972296D6EC200B36BD4 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BC8971296D6EC200B36BD4 /* Resources.swift */; };
 		B2BC8974296D6EDC00B36BD4 /* UseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BC8973296D6EDC00B36BD4 /* UseCases.swift */; };
-		B2BC8978296D997700B36BD4 /* GetYearsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BC8977296D997700B36BD4 /* GetYearsList.swift */; };
 		B2BC897A296DA87400B36BD4 /* RangeReplaceableCollection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BC8979296DA87400B36BD4 /* RangeReplaceableCollection+Extension.swift */; };
-		B2BC897C296DAAEB00B36BD4 /* GetMonthsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BC897B296DAAEB00B36BD4 /* GetMonthsList.swift */; };
 		B2BCE8662966E012001B8388 /* YearAndMonthStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BCE8652966E012001B8388 /* YearAndMonthStruct.swift */; };
 		B2BCE86C2966F722001B8388 /* DayStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BCE86B2966F722001B8388 /* DayStruct.swift */; };
 		B2BCE86E2966FF73001B8388 /* DayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BCE86D2966FF73001B8388 /* DayList.swift */; };
@@ -39,12 +45,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B21B2188296FD3D30092FFD6 /* ProvidingDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvidingDataManager.swift; sourceTree = "<group>"; };
+		B21B218B296FF9740092FFD6 /* NewMemoryToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMemoryToolbar.swift; sourceTree = "<group>"; };
+		B21B218D2970004C0092FFD6 /* JustCloseToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustCloseToolbar.swift; sourceTree = "<group>"; };
+		B21B218F297001FC0092FFD6 /* MainToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainToolbar.swift; sourceTree = "<group>"; };
+		B21B2191297004AE0092FFD6 /* SettingsToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsToolbar.swift; sourceTree = "<group>"; };
+		B21B219329703C630092FFD6 /* DatabaseDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseDataManager.swift; sourceTree = "<group>"; };
+		B21B2195297042CE0092FFD6 /* JSONDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataManager.swift; sourceTree = "<group>"; };
+		B21B219A297064BF0092FFD6 /* Just-Diary-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Just-Diary-Info.plist"; sourceTree = SOURCE_ROOT; };
 		B252B7C6296DBBFE0093DF14 /* GetYearFromDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetYearFromDate.swift; sourceTree = "<group>"; };
 		B252B7C8296DBCA30093DF14 /* GetMonthFromDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMonthFromDate.swift; sourceTree = "<group>"; };
-		B252B7CA296DC21F0093DF14 /* GetDaysList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDaysList.swift; sourceTree = "<group>"; };
 		B266ECEB295C90FA008F70DB /* Just Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Just Diary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B266ECEE295C90FA008F70DB /* Just_DiaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Just_DiaryApp.swift; sourceTree = "<group>"; };
-		B266ECF0295C90FA008F70DB /* YearList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearList.swift; sourceTree = "<group>"; };
+		B266ECF0295C90FA008F70DB /* MainList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainList.swift; sourceTree = "<group>"; };
 		B266ECF2295C90FC008F70DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B266ECF4295C90FC008F70DB /* Just_Diary.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Just_Diary.entitlements; sourceTree = "<group>"; };
 		B266ECF6295C90FC008F70DB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -55,14 +68,11 @@
 		B28DB6F4296987320033DEE8 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B28DB6F7296987B70033DEE8 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		B28DB6F92969ADB90033DEE8 /* NewMemoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMemoryView.swift; sourceTree = "<group>"; };
-		B2BC8969296D509300B36BD4 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
-		B2BC896B296D5FE800B36BD4 /* AddNewMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewMemory.swift; sourceTree = "<group>"; };
+		B2BC8969296D509300B36BD4 /* LocalRxDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRxDataManager.swift; sourceTree = "<group>"; };
 		B2BC896E296D6D0D00B36BD4 /* Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
 		B2BC8971296D6EC200B36BD4 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		B2BC8973296D6EDC00B36BD4 /* UseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCases.swift; sourceTree = "<group>"; };
-		B2BC8977296D997700B36BD4 /* GetYearsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetYearsList.swift; sourceTree = "<group>"; };
 		B2BC8979296DA87400B36BD4 /* RangeReplaceableCollection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RangeReplaceableCollection+Extension.swift"; sourceTree = "<group>"; };
-		B2BC897B296DAAEB00B36BD4 /* GetMonthsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMonthsList.swift; sourceTree = "<group>"; };
 		B2BCE8652966E012001B8388 /* YearAndMonthStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearAndMonthStruct.swift; sourceTree = "<group>"; };
 		B2BCE86B2966F722001B8388 /* DayStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayStruct.swift; sourceTree = "<group>"; };
 		B2BCE86D2966FF73001B8388 /* DayList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayList.swift; sourceTree = "<group>"; };
@@ -78,12 +88,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B252B7D2296ED6860093DF14 /* RxSwift in Frameworks */,
+				B252B7D0296ED6860093DF14 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B21B218A296FF95E0092FFD6 /* Toolbars */ = {
+			isa = PBXGroup;
+			children = (
+				B21B218B296FF9740092FFD6 /* NewMemoryToolbar.swift */,
+				B21B218D2970004C0092FFD6 /* JustCloseToolbar.swift */,
+				B21B218F297001FC0092FFD6 /* MainToolbar.swift */,
+				B21B2191297004AE0092FFD6 /* SettingsToolbar.swift */,
+			);
+			path = Toolbars;
+			sourceTree = "<group>";
+		};
 		B266ECE2295C90FA008F70DB = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +126,7 @@
 		B266ECED295C90FA008F70DB /* Just Diary */ = {
 			isa = PBXGroup;
 			children = (
+				B21B219A297064BF0092FFD6 /* Just-Diary-Info.plist */,
 				B28DB6E7296986370033DEE8 /* Assets */,
 				B2BCE87929673829001B8388 /* UseCases */,
 				B2BCE873296705CF001B8388 /* Constatns */,
@@ -112,7 +136,6 @@
 				B2BCE8642966DC02001B8388 /* ModelsStructUI */,
 				B2BCE8632966D900001B8388 /* UI */,
 				B266ECEE295C90FA008F70DB /* Just_DiaryApp.swift */,
-				B2BC8969296D509300B36BD4 /* AppState.swift */,
 				B266ECF4295C90FC008F70DB /* Just_Diary.entitlements */,
 				B266ECF5295C90FC008F70DB /* Preview Content */,
 				B2BCE87C29694288001B8388 /* MainData.xcdatamodeld */,
@@ -167,6 +190,10 @@
 			children = (
 				B2BC8971296D6EC200B36BD4 /* Resources.swift */,
 				B2BC8973296D6EDC00B36BD4 /* UseCases.swift */,
+				B2BC8969296D509300B36BD4 /* LocalRxDataManager.swift */,
+				B21B2188296FD3D30092FFD6 /* ProvidingDataManager.swift */,
+				B21B219329703C630092FFD6 /* DatabaseDataManager.swift */,
+				B21B2195297042CE0092FFD6 /* JSONDataManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -174,6 +201,7 @@
 		B2BCE8632966D900001B8388 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				B21B218A296FF95E0092FFD6 /* Toolbars */,
 				B28DB6E029695D000033DEE8 /* SheetViews */,
 				B2BCE87F29694D68001B8388 /* FullScreenViews */,
 				B2BCE86F2967009E001B8388 /* Lists */,
@@ -194,7 +222,7 @@
 		B2BCE86F2967009E001B8388 /* Lists */ = {
 			isa = PBXGroup;
 			children = (
-				B266ECF0295C90FA008F70DB /* YearList.swift */,
+				B266ECF0295C90FA008F70DB /* MainList.swift */,
 				B2BCE86D2966FF73001B8388 /* DayList.swift */,
 			);
 			path = Lists;
@@ -221,13 +249,9 @@
 		B2BCE87929673829001B8388 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				B2BC896B296D5FE800B36BD4 /* AddNewMemory.swift */,
-				B2BC8977296D997700B36BD4 /* GetYearsList.swift */,
-				B2BC897B296DAAEB00B36BD4 /* GetMonthsList.swift */,
 				B2BCE87A2967383B001B8388 /* GetClearData.swift */,
 				B252B7C6296DBBFE0093DF14 /* GetYearFromDate.swift */,
 				B252B7C8296DBCA30093DF14 /* GetMonthFromDate.swift */,
-				B252B7CA296DC21F0093DF14 /* GetDaysList.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -257,6 +281,10 @@
 			dependencies = (
 			);
 			name = "Just Diary";
+			packageProductDependencies = (
+				B252B7CF296ED6860093DF14 /* RxCocoa */,
+				B252B7D1296ED6860093DF14 /* RxSwift */,
+			);
 			productName = "Just Diary";
 			productReference = B266ECEB295C90FA008F70DB /* Just Diary.app */;
 			productType = "com.apple.product-type.application";
@@ -286,6 +314,9 @@
 				ru,
 			);
 			mainGroup = B266ECE2295C90FA008F70DB;
+			packageReferences = (
+				B252B7CE296ED6850093DF14 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = B266ECEC295C90FA008F70DB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -300,6 +331,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B21B219B297064EE0092FFD6 /* Just-Diary-Info.plist in Resources */,
 				B28DB6F12969871D0033DEE8 /* Localizable.strings in Resources */,
 				B266ECF7295C90FC008F70DB /* Preview Assets.xcassets in Resources */,
 				B266ECF3295C90FC008F70DB /* Assets.xcassets in Resources */,
@@ -313,18 +345,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B21B218E2970004D0092FFD6 /* JustCloseToolbar.swift in Sources */,
 				B28DB6F8296987B70033DEE8 /* String+Extension.swift in Sources */,
-				B2BC897C296DAAEB00B36BD4 /* GetMonthsList.swift in Sources */,
+				B21B2196297042CE0092FFD6 /* JSONDataManager.swift in Sources */,
 				B2BCE87E29694288001B8388 /* MainData.xcdatamodeld in Sources */,
 				B252B7C7296DBBFE0093DF14 /* GetYearFromDate.swift in Sources */,
+				B21B2192297004AF0092FFD6 /* SettingsToolbar.swift in Sources */,
 				B252B7C9296DBCA30093DF14 /* GetMonthFromDate.swift in Sources */,
-				B2BC896A296D509300B36BD4 /* AppState.swift in Sources */,
+				B21B219429703C630092FFD6 /* DatabaseDataManager.swift in Sources */,
+				B2BC896A296D509300B36BD4 /* LocalRxDataManager.swift in Sources */,
 				B28DB6E229695D3C0033DEE8 /* AboutDeveloperView.swift in Sources */,
-				B266ECF1295C90FA008F70DB /* YearList.swift in Sources */,
+				B266ECF1295C90FA008F70DB /* MainList.swift in Sources */,
 				B266ECEF295C90FA008F70DB /* Just_DiaryApp.swift in Sources */,
-				B252B7CB296DC21F0093DF14 /* GetDaysList.swift in Sources */,
 				B2BC896F296D6D0D00B36BD4 /* Memory.swift in Sources */,
+				B21B2189296FD3D30092FFD6 /* ProvidingDataManager.swift in Sources */,
 				B2BC8972296D6EC200B36BD4 /* Resources.swift in Sources */,
+				B21B2190297001FC0092FFD6 /* MainToolbar.swift in Sources */,
 				B2BCE86E2966FF73001B8388 /* DayList.swift in Sources */,
 				B28DB6E4296961E40033DEE8 /* Image.swift in Sources */,
 				B2BC897A296DA87400B36BD4 /* RangeReplaceableCollection+Extension.swift in Sources */,
@@ -332,13 +368,12 @@
 				B2BCE87B2967383B001B8388 /* GetClearData.swift in Sources */,
 				B2BCE86C2966F722001B8388 /* DayStruct.swift in Sources */,
 				B2BCE88129694D95001B8388 /* SettingsView.swift in Sources */,
-				B2BC896C296D5FE800B36BD4 /* AddNewMemory.swift in Sources */,
 				B2BC8974296D6EDC00B36BD4 /* UseCases.swift in Sources */,
 				B28DB6E62969817D0033DEE8 /* String.swift in Sources */,
 				B28DB6FA2969ADB90033DEE8 /* NewMemoryView.swift in Sources */,
-				B2BC8978296D997700B36BD4 /* GetYearsList.swift in Sources */,
 				B2BCE8662966E012001B8388 /* YearAndMonthStruct.swift in Sources */,
 				B2BCE875296705D9001B8388 /* Color.swift in Sources */,
+				B21B218C296FF9740092FFD6 /* NewMemoryToolbar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +516,10 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Just-Diary-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -519,6 +558,10 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Just-Diary-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -566,6 +609,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B252B7CE296ED6850093DF14 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B252B7CF296ED6860093DF14 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B252B7CE296ED6850093DF14 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		B252B7D1296ED6860093DF14 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B252B7CE296ED6850093DF14 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		B2BCE87C29694288001B8388 /* MainData.xcdatamodeld */ = {

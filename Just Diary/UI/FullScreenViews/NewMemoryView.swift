@@ -10,6 +10,7 @@ import SwiftUI
 struct NewMemoryView: View {
     
     @Environment(\.presentationMode) var presentationMode
+    @State private var exitItem: Bool?
     
     @State var title = ""
     @State var message = ""
@@ -31,7 +32,7 @@ struct NewMemoryView: View {
                         }
                 }
                 .onTapGesture {
-                    hideKeyboard()
+//                    hideKeyboard()
                 }
                 Section {
                     TextEditor(
@@ -40,25 +41,23 @@ struct NewMemoryView: View {
                     .frame(minHeight: 250)
                 }
             }
-            
-   
             .navigationTitle(R.string.newMemory.title)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: {
+                NewMemoryToolbar(
+                    close: {
                         self.presentationMode.wrappedValue.dismiss()
-                    }) {
-                        Image(systemName: "multiply").imageScale(.large)
+                    },
+                    save: {
+                        LocalRxDataManager.shared.addMemory(
+                            title: self.title,
+                            message: self.message,
+                            date: self.datePickerDate
+                        )
+                        self.presentationMode.wrappedValue.dismiss()
                     }
-                }
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        print()
-                    }) {
-                        Text(R.string.newMemory.save)
-                    }
-                }
+                )
+
             }
         }
     }
@@ -70,23 +69,23 @@ struct NewMemoryView_Previews: PreviewProvider {
     }
 }
 
-extension View {
-    func hideKeyboard() {
-        let resign = #selector(UIResponder.resignFirstResponder)
-        UIApplication.shared.sendAction(resign, to: nil, from: nil, for: nil)
-    }
-}
+//extension View {
+//    func hideKeyboard() {
+//        let resign = #selector(UIResponder.resignFirstResponder)
+//        UIApplication.shared.sendAction(resign, to: nil, from: nil, for: nil)
+//    }
+//}
 
-struct Background<Content: View>: View {
-    private var content: Content
-
-    init(@ViewBuilder content: @escaping () -> Content) {
-        self.content = content()
-    }
-
-    var body: some View {
-        Color.white
-        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-        .overlay(content)
-    }
-}
+//struct Background<Content: View>: View {
+//    private var content: Content
+//
+//    init(@ViewBuilder content: @escaping () -> Content) {
+//        self.content = content()
+//    }
+//
+//    var body: some View {
+//        Color.white
+//        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+//        .overlay(content)
+//    }
+//}

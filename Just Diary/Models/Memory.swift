@@ -7,16 +7,24 @@
 
 import Foundation
 
-class Memory {
+class Memory: NSObject, Codable {
     
-    private let id = UUID()
-    public let date: Date
     public var title: String
     public var message: String
+    public let id: UUID
+    public let date: Date
     
     init(date: Date, title: String, message: String) {
-        self.date = date
         self.title = title
         self.message = message
+        self.id = UUID()
+        self.date = date
+    }
+    
+    init(fromMemoreObject memoryObject: MemoryObject) {
+        self.title = memoryObject.title ?? R.string.model.noName
+        self.message = memoryObject.message ?? ""
+        self.id = memoryObject.id ?? UUID()
+        self.date = memoryObject.date ?? Date()
     }
 }

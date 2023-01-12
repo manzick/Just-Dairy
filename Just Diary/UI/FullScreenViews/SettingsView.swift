@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct SettingsView: View {
-    
-    @State var showAboutDeveloperSV = false
 
     var body: some View {
         List {
@@ -36,16 +34,9 @@ struct SettingsView: View {
             }
         }
         .navigationTitle(R.string.settings.title)
-        .navigationBarItems(trailing:
-            Button(action: {
-                print()
-            self.showAboutDeveloperSV.toggle()
-            }) {
-                Text(R.string.aboutDeveloper.title)
-            }.sheet(isPresented: $showAboutDeveloperSV) {
-                AboutDeveloperView()
-            }
-        )
+        .toolbar {
+            SettingsToolbar()
+        }
     }
 }
 
