@@ -13,7 +13,7 @@ class DatabaseDataManager {
     private let container = NSPersistentContainer(name: "MainData")
     private var managedContext: NSManagedObjectContext?
     
-    func getFromDB() -> [Memory] {
+    func getData() -> [Memory] {
         guard let managedContext = self.managedContext else { return [] }
         let memoryFetch = MemoryObject.fetchRequest()
         let sortByDate = NSSortDescriptor(key: #keyPath(MemoryObject.date), ascending: false)
@@ -32,7 +32,7 @@ class DatabaseDataManager {
         }
     }
     
-    func saveToDB(memory: Memory) {
+    func saveData(memory: Memory) {
         guard let managedContext = self.managedContext else { return }
         let memoryObject = MemoryObject(context: managedContext)
         memoryObject.title = memory.title

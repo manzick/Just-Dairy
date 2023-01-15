@@ -23,7 +23,6 @@ struct MainToolbar: ToolbarContent {
         ToolbarItem(placement: .navigationBarTrailing) {
             Button(action: {
                 self.showNewMemoryModal = true
-                JSONDataManager.shared.saveldsufhvl()
             }) {
                 Image(systemName: "square.and.pencil").imageScale(.large)
             }.fullScreenCover(isPresented: $showNewMemoryModal) {

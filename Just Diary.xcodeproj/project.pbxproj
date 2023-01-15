@@ -15,6 +15,9 @@
 		B21B219429703C630092FFD6 /* DatabaseDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21B219329703C630092FFD6 /* DatabaseDataManager.swift */; };
 		B21B2196297042CE0092FFD6 /* JSONDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21B2195297042CE0092FFD6 /* JSONDataManager.swift */; };
 		B21B219B297064EE0092FFD6 /* Just-Diary-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B21B219A297064BF0092FFD6 /* Just-Diary-Info.plist */; };
+		B21B21A129729ED10092FFD6 /* JSONDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21B21A029729ED10092FFD6 /* JSONDocument.swift */; };
+		B21B21A52972AC2B0092FFD6 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21B21A42972AC2B0092FFD6 /* ActivityView.swift */; };
+		B21B21A72972B40E0092FFD6 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21B21A62972B40E0092FFD6 /* View+Extension.swift */; };
 		B252B7C7296DBBFE0093DF14 /* GetYearFromDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B252B7C6296DBBFE0093DF14 /* GetYearFromDate.swift */; };
 		B252B7C9296DBCA30093DF14 /* GetMonthFromDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B252B7C8296DBCA30093DF14 /* GetMonthFromDate.swift */; };
 		B252B7D0296ED6860093DF14 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = B252B7CF296ED6860093DF14 /* RxCocoa */; };
@@ -53,6 +56,9 @@
 		B21B219329703C630092FFD6 /* DatabaseDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseDataManager.swift; sourceTree = "<group>"; };
 		B21B2195297042CE0092FFD6 /* JSONDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataManager.swift; sourceTree = "<group>"; };
 		B21B219A297064BF0092FFD6 /* Just-Diary-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Just-Diary-Info.plist"; sourceTree = SOURCE_ROOT; };
+		B21B21A029729ED10092FFD6 /* JSONDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDocument.swift; sourceTree = "<group>"; };
+		B21B21A42972AC2B0092FFD6 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		B21B21A62972B40E0092FFD6 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		B252B7C6296DBBFE0093DF14 /* GetYearFromDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetYearFromDate.swift; sourceTree = "<group>"; };
 		B252B7C8296DBCA30093DF14 /* GetMonthFromDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMonthFromDate.swift; sourceTree = "<group>"; };
 		B266ECEB295C90FA008F70DB /* Just Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Just Diary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,6 +179,8 @@
 			children = (
 				B28DB6F7296987B70033DEE8 /* String+Extension.swift */,
 				B2BC8979296DA87400B36BD4 /* RangeReplaceableCollection+Extension.swift */,
+				B21B21A42972AC2B0092FFD6 /* ActivityView.swift */,
+				B21B21A62972B40E0092FFD6 /* View+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -181,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				B2BC896E296D6D0D00B36BD4 /* Memory.swift */,
+				B21B21A029729ED10092FFD6 /* JSONDocument.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -363,6 +372,7 @@
 				B21B2190297001FC0092FFD6 /* MainToolbar.swift in Sources */,
 				B2BCE86E2966FF73001B8388 /* DayList.swift in Sources */,
 				B28DB6E4296961E40033DEE8 /* Image.swift in Sources */,
+				B21B21A72972B40E0092FFD6 /* View+Extension.swift in Sources */,
 				B2BC897A296DA87400B36BD4 /* RangeReplaceableCollection+Extension.swift in Sources */,
 				B2BCE872296700DA001B8388 /* DayRow.swift in Sources */,
 				B2BCE87B2967383B001B8388 /* GetClearData.swift in Sources */,
@@ -371,6 +381,8 @@
 				B2BC8974296D6EDC00B36BD4 /* UseCases.swift in Sources */,
 				B28DB6E62969817D0033DEE8 /* String.swift in Sources */,
 				B28DB6FA2969ADB90033DEE8 /* NewMemoryView.swift in Sources */,
+				B21B21A52972AC2B0092FFD6 /* ActivityView.swift in Sources */,
+				B21B21A129729ED10092FFD6 /* JSONDocument.swift in Sources */,
 				B2BCE8662966E012001B8388 /* YearAndMonthStruct.swift in Sources */,
 				B2BCE875296705D9001B8388 /* Color.swift in Sources */,
 				B21B218C296FF9740092FFD6 /* NewMemoryToolbar.swift in Sources */,

@@ -23,12 +23,22 @@ class LocalRxDataManager {
         var tempMemories = self.memories.value
         tempMemories.append(memory)
         self.memories.accept(tempMemories)
-        DatabaseDataManager.shared.saveToDB(memory: memory)
+        DatabaseDataManager.shared.saveData(memory: memory)
     }
     
     public func addMemory(title: String, message: String, date: Date) {
         let memory = Memory(date: date, title: title, message: message)
         self.addMemory(memory)
+    }
+    
+    public func replaceMemories(_  memories: [Memory]) {
+        self.memories.accept(memories)
+    }
+    
+    public func mergeMemories(_  memories: [Memory]) {
+        let oldMemories = self.memories.value
+        let mergedMemories = Array(Set(oldMemories + memories))
+        self.memories.accept(mergedMemories)
     }
 
     
@@ -40,7 +50,7 @@ class LocalRxDataManager {
         ]
         self.memories.accept(debugData)
         
-        self.memories.accept(DatabaseDataManager.shared.getFromDB())
+        self.memories.accept(DatabaseDataManager.shared.getData())
     }
     
     static let shared = LocalRxDataManager()

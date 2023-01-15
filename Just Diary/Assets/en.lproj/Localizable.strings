@@ -41,4 +41,8 @@
 "Backup to iCloud (now to files)" = "Backup to iCloud (now to files)";
 "Load" = "Load";
 "Save" = "Save";
+"loadDialogTitle" = "Do you want to merge new data with old data or overwrite?";
+"Merge" = "Merge";
+"Rewrite" = "Rewrite";
+"Load data from JSON failed" = "Load data from JSON failed";
 /* ============================================================ */

@@ -1,0 +1,33 @@
+//
+//  ActivityView.swift
+//  Just Diary
+//
+//  Created by Alexander Manzurov on 14.01.2023.
+//
+
+import SwiftUI
+
+struct ActivityView: UIViewControllerRepresentable {
+
+    let activityItems: [Any]
+    let applicationActivities: [UIActivity]?
+
+    func makeUIViewController(
+        context: UIViewControllerRepresentableContext<ActivityView>
+    ) -> UIActivityViewController {
+        
+        return UIActivityViewController(
+            activityItems: activityItems,
+            applicationActivities: applicationActivities
+        )
+    }
+
+    func updateUIViewController(
+        _ uiViewController: UIActivityViewController,
+        context: UIViewControllerRepresentableContext<ActivityView>
+    ) {
+
+    }
+    
+}
+

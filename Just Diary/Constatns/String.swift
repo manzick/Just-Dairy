@@ -10,6 +10,7 @@ import Foundation
 extension R {
     struct string {
         static let text = "Text"
+        static let ok = "OK"
         struct link {
             static let manzickTwitterLink = "https://mobile.twitter.com/manzick"
             static let manzickTelegramLink = "https://t.me/manzick"
@@ -29,6 +30,10 @@ extension R {
             static let cloudHeader = "Backup to iCloud (now to files)".localize()
             static let load = "Load".localize()
             static let save = "Save".localize()
+            static let loadDialogTitle = "loadDialogTitle".localize()
+            static let merge = "Merge".localize()
+            static let rewrite = "Rewrite".localize()
+            static let loadDataFailed = "Load data from JSON failed".localize()
         }
         struct newMemory {
             static let title = "New memory".localize()
