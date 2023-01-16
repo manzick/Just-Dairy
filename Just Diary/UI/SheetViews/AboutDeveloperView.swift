@@ -52,12 +52,12 @@ struct AboutDeveloperView: View {
                 Spacer()
             }
             .navigationTitle(R.string.aboutDeveloper.title)
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    JustCloseToolbar(close: {
-                        self.dismiss()
-                    })
-                }
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                JustCloseToolbar(close: {
+                    self.dismiss()
+                })
+            }
         }
     }
 }

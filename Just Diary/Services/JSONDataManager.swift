@@ -11,10 +11,7 @@ class JSONDataManager {
     
     private var savedMemory: [Memory] = []
     
-    //Оптимизация. Проблема в функции activityView, которая дергает getDocument на каждой отрисовке
-    //На данном этапе изучения SwiftUI не вижу других способов исправить проблему
-    func getDocument(isCalled: Bool = false) -> URL {
-        guard isCalled else { return URL(fileURLWithPath: "") }
+    func getDocument() -> URL {
         let jsonString = self.getJsonString()
         self.saveToAppFolder(jsonString)
         return self.getDocumentPath()

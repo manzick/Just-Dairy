@@ -11,6 +11,11 @@ struct DayList: View {
     @State public var title: String
     @State public var days: [DayStruct]
     
+    @State var showSheetView: Bool = false
+    @State var clickIdString: String?
+    
+//    @State var showMemorySV = false
+    
     init(title: String, days: [DayStruct]) {
         self.title = title
         self.days = days
@@ -18,15 +23,31 @@ struct DayList: View {
 
     var body: some View {
         List(days) { day in
-            NavigationLink {
-//                MonthList(title: mob.id)
-            } label: {
+//            NavigationLink {
+////                MonthList(title: mob.id)
+//            } label: {
+//                DayRow(
+//                    title: day.title,
+//                    date: day.date,
+//                    message: day.message
+//                )
+//            }
+            Button(action: {
+                self.showSheetView.toggle()
+                ProvidingDataManager.shared.clickDayIdString = day.id.uuidString
+                print()
+            }) {
                 DayRow(
                     title: day.title,
                     date: day.date,
                     message: day.message
                 )
             }
+            
+        }
+        .sheet(isPresented: $showSheetView) {
+            let day = UseCases.shared.findTriggeredObj(in: self.days)
+            MemoryView(dayStruct: day)
         }
         .navigationTitle(title)
     }

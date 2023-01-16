@@ -92,9 +92,7 @@ struct SettingsView: View {
         .activityView(
             isPresented: $showingShareActivity,
             items: [
-                JSONDataManager.shared.getDocument(
-                    isCalled: showingShareActivity
-                )
+                UseCases.shared.getJSONDocument(isCalled: showingShareActivity)
             ]
         )
         .navigationTitle(R.string.settings.title)

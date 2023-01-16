@@ -3,4 +3,70 @@
    uuid = "3AD104F0-1DD9-4F17-B2E8-643A1D206A57"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8E523110-6866-4467-9DA4-BE0FDB102921"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Just Diary/Services/DatabaseDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "delete(memory:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "97BEFD62-87FB-40F7-962D-AC8DE84FCF27"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Just Diary/Services/LocalRxDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "removeMemory(byId:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "97BEFD62-87FB-40F7-962D-AC8DE84FCF27 - 39870f7886bef4c8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Just_Diary.LocalRxDataManager.removeMemory(byId: Foundation.UUID) -&gt; ()"
+                  moduleName = "Just Diary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/manzick/Projects/Just%20Diary/Just%20Diary/Services/LocalRxDataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  uuid = "97BEFD62-87FB-40F7-962D-AC8DE84FCF27 - 3ea01e812ac76e67"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Just_Diary.Memory) -&gt; Swift.Bool in Just_Diary.LocalRxDataManager.removeMemory(byId: Foundation.UUID) -&gt; ()"
+                  moduleName = "Just Diary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/manzick/Projects/Just%20Diary/Just%20Diary/Services/LocalRxDataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "136">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -31,6 +31,14 @@ class LocalRxDataManager {
         self.addMemory(memory)
     }
     
+    public func removeMemory(byId id: UUID) {
+        guard let memory = memories.value.first(where: {$0.id == id}) else { return }
+        var tempMemories = self.memories.value
+        tempMemories.removeAll(where: {$0.id == id})
+        self.memories.accept(tempMemories)
+        DatabaseDataManager.shared.delete(memory: memory)
+    }
+    
     public func replaceMemories(_  memories: [Memory]) {
         self.memories.accept(memories)
     }

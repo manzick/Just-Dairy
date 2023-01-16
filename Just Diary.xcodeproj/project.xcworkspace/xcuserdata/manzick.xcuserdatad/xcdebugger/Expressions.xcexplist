@@ -3,6 +3,20 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "closure #2 in DayList.body.getter:DayList.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.clickIdString">
+            </PersistentString>
+            <PersistentString
+               value = "showSheetView">
+            </PersistentString>
+            <PersistentString
+               value = "$clickIdString.wrappedValue">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "UseCases.getDaysList(forMonth:andYear:):GetDaysList.swift">
          <PersistentStrings>
             <PersistentString
@@ -14,12 +28,34 @@
          contextName = "DataManager.getFromDB():DataManager.swift">
       </ContextState>
       <ContextState
+         contextName = "UseCases.findTriggeredObj(in:withId:):FindTriggeredObj.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "day.id.uuidString">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #1 in DayList.body.getter:DayList.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.clickIdString">
+            </PersistentString>
+            <PersistentString
+               value = "day.id.uuidString">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "Memory.init(fromMemoreObject:):Memory.swift">
          <PersistentStrings>
             <PersistentString
                value = "memoryObject.date">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "UseCases.findTriggeredObj(in:):FindTriggeredObj.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

@@ -12,8 +12,7 @@ import RxCocoa
 class ProvidingDataManager: ObservableObject {
     
     @Published var yearsListWithMonth: [YearAndMonthStruct] = []
-//    @Published var daysList: [DayStruct] = []
-//    Publishing changes from within view updates is not allowed, this will cause undefined behavior.
+    var clickDayIdString: String?
     
 
     func getDaysList(forMonth month: String, andYear year: String) -> [DayStruct] {
