@@ -15,12 +15,14 @@ class Memory: Codable, Hashable, Equatable {
     public var message: String
     public let id: UUID
     public let date: Date
+    public let isFavorite: Bool
     
-    init(date: Date, title: String, message: String) {
+    init(date: Date, title: String, message: String, isFavorite: Bool = false) {
         self.title = title
         self.message = message
         self.id = UUID()
         self.date = date
+        self.isFavorite = isFavorite
     }
     
     init(fromMemoreObject memoryObject: MemoryObject) {
@@ -28,14 +30,16 @@ class Memory: Codable, Hashable, Equatable {
         self.message = memoryObject.message ?? ""
         self.id = memoryObject.id ?? UUID()
         self.date = memoryObject.date ?? Date()
+        self.isFavorite = memoryObject.isFavorite
     }
     
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = try container.decode(UUID.self, forKey: .id)
-        self.title = try container.decode(String.self, forKey: .title)
-        self.message = try container.decode(String.self, forKey: .message)
-        self.date = try container.decode(Date.self, forKey: .date)
+        self.id = (try? container.decode(UUID.self, forKey: .id)) ?? UUID()
+        self.title = (try? container.decode(String.self, forKey: .title)) ?? ""
+        self.message = (try? container.decode(String.self, forKey: .message)) ?? ""
+        self.date = (try? container.decode(Date.self, forKey: .date)) ?? Date()
+        self.isFavorite = (try? container.decode(Bool.self, forKey: .isFavorite)) ?? false
     }
     
     enum CodingKeys: String, CodingKey {
@@ -43,6 +47,7 @@ class Memory: Codable, Hashable, Equatable {
         case title
         case message
         case date
+        case isFavorite
     }
     
     public func hash(into hasher: inout Hasher) {
@@ -51,20 +56,5 @@ class Memory: Codable, Hashable, Equatable {
     
     static func ==(left:Memory, right:Memory) -> Bool {
         return left.id == right.id
-    }
-}
-
-class MemoriesBox: Codable {
-    let memories: [Memory]
-    init(with memories: [Memory]) {
-        self.memories = memories
-    }
-    required init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.memories = try container.decode([Memory].self, forKey: .memories)
-    }
-    
-    enum CodingKeys: String, CodingKey {
-        case memories
     }
 }

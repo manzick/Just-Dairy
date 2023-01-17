@@ -15,5 +15,6 @@ extension MemoryObject {
         self.title = memory.title
         self.message = memory.message
         self.date = memory.date
+        self.isFavorite = memory.isFavorite
     }
 }

@@ -20,6 +20,7 @@
 		B21B21A72972B40E0092FFD6 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21B21A62972B40E0092FFD6 /* View+Extension.swift */; };
 		B21B21A929753CA60092FFD6 /* GetJSONDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21B21A829753CA60092FFD6 /* GetJSONDocument.swift */; };
 		B21B21AB29753F8F0092FFD6 /* MemoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21B21AA29753F8F0092FFD6 /* MemoryView.swift */; };
+		B21E89C8297599DB001F96AD /* MemoriesBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21E89C7297599DB001F96AD /* MemoriesBox.swift */; };
 		B252B7C7296DBBFE0093DF14 /* GetYearFromDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B252B7C6296DBBFE0093DF14 /* GetYearFromDate.swift */; };
 		B252B7C9296DBCA30093DF14 /* GetMonthFromDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B252B7C8296DBCA30093DF14 /* GetMonthFromDate.swift */; };
 		B252B7D0296ED6860093DF14 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = B252B7CF296ED6860093DF14 /* RxCocoa */; };
@@ -66,6 +67,7 @@
 		B21B21A62972B40E0092FFD6 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		B21B21A829753CA60092FFD6 /* GetJSONDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetJSONDocument.swift; sourceTree = "<group>"; };
 		B21B21AA29753F8F0092FFD6 /* MemoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryView.swift; sourceTree = "<group>"; };
+		B21E89C7297599DB001F96AD /* MemoriesBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesBox.swift; sourceTree = "<group>"; };
 		B252B7C6296DBBFE0093DF14 /* GetYearFromDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetYearFromDate.swift; sourceTree = "<group>"; };
 		B252B7C8296DBCA30093DF14 /* GetMonthFromDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMonthFromDate.swift; sourceTree = "<group>"; };
 		B266ECEB295C90FA008F70DB /* Just Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Just Diary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -203,6 +205,7 @@
 			children = (
 				B2BC896E296D6D0D00B36BD4 /* Memory.swift */,
 				B21B21A029729ED10092FFD6 /* JSONDocument.swift */,
+				B21E89C7297599DB001F96AD /* MemoriesBox.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				B21B2189296FD3D30092FFD6 /* ProvidingDataManager.swift in Sources */,
 				B2BC8972296D6EC200B36BD4 /* Resources.swift in Sources */,
 				B21B2190297001FC0092FFD6 /* MainToolbar.swift in Sources */,
+				B21E89C8297599DB001F96AD /* MemoriesBox.swift in Sources */,
 				B2BCE86E2966FF73001B8388 /* DayList.swift in Sources */,
 				B28DB6E4296961E40033DEE8 /* Image.swift in Sources */,
 				B21B21A72972B40E0092FFD6 /* View+Extension.swift in Sources */,

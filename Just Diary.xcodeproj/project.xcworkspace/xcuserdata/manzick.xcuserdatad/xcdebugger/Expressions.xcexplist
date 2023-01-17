@@ -47,10 +47,24 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "closure #2 in SettingsView.body.getter:SettingsView.swift">
+      </ContextState>
+      <ContextState
          contextName = "Memory.init(fromMemoreObject:):Memory.swift">
          <PersistentStrings>
             <PersistentString
                value = "memoryObject.date">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MemoriesBox.init(from:):MemoriesBox.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "try decoder.container(keyedBy: CodingKeys.self)">
+            </PersistentString>
+            <PersistentString
+               value = "try container.decode([Data].self, forKey: .memories)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

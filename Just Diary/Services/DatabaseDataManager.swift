@@ -34,7 +34,7 @@ class DatabaseDataManager {
     
     func saveData(memory: Memory) {
         guard let managedContext = self.managedContext else { return }
-        let memoryObject = MemoryObject(byMemory: memory, andContext: managedContext)
+        _ = MemoryObject(byMemory: memory, andContext: managedContext)
         self.saveContext()
     }
     
@@ -43,18 +43,13 @@ class DatabaseDataManager {
         let memoryObject = MemoryObject(byMemory: memory, andContext: managedContext)
         managedContext.delete(memoryObject)
         self.saveContext()
-        
-        
-// Delete the user-selected item from the context
-//        let viewContext = store.persistentContainer.viewContext
-//        viewContext.delete(items[index])
-//
-//        // Delete the user-selected item from the data source
-//        items.remove(at: index)
-//        collectionView.deleteItems(at: [IndexPath(row: index, section: 0)])
-//
-//        // Save changes to the Managed Object Context
-//        store.saveContext()
+    }
+    
+    func update(memory: Memory) {
+//        guard let managedContext = self.managedContext else { return }
+//        let memoryObject = MemoryObject(byMemory: memory, andContext: managedContext)
+//        managedContext.fet
+//        self.saveContext()
     }
     
     // MARK: - Private func
