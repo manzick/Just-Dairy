@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+#if canImport(UIKit)
+@available(iOS 15, *)
+@available(macOS, unavailable)
+@available(watchOS, unavailable)
 struct ActivityView: UIViewControllerRepresentable {
 
     let activityItems: [Any]
@@ -30,4 +34,5 @@ struct ActivityView: UIViewControllerRepresentable {
     }
     
 }
+#endif
 

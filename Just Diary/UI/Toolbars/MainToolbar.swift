@@ -10,6 +10,8 @@ import SwiftUI
 struct MainToolbar: ToolbarContent {
     
     @State private var showNewMemoryModal = false
+    
+    @State var showSettingsMacOSSV = false
 
     var body: some ToolbarContent {
     #if os(iOS)
@@ -30,7 +32,15 @@ struct MainToolbar: ToolbarContent {
             }
         }
     #else
-        ToolbarItem(placement: .automatic) {
+        ToolbarItem(placement: .primaryAction) {
+            Button(action: {
+                print()
+            self.showSettingsMacOSSV.toggle()
+            }) {
+                Image(systemName: "gear").imageScale(.large)
+            }.sheet(isPresented: $showSettingsMacOSSV) {
+                SettingsView()
+            }
         }
     #endif
     }

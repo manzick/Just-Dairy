@@ -33,7 +33,9 @@ struct MemoryView: View {
                 }
             }
                 .navigationTitle(dayStruct.date)
+                #if os(iOS)
                 .navigationBarTitleDisplayMode(.inline)
+                #endif
                 .toolbar {
                     MemoryViewToolbar(
                         close: {

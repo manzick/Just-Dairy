@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+#if canImport(UIKit)
+@available(iOS 15, *)
+@available(macOS, unavailable)
+@available(watchOS, unavailable)
 extension View {
     @ViewBuilder
     public func activityView(isPresented: Binding<Bool>, items: [Any]) -> some View {
@@ -26,3 +30,4 @@ extension View {
         }
     }
 }
+#endif

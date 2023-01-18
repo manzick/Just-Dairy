@@ -42,7 +42,9 @@ struct NewMemoryView: View {
                 }
             }
             .navigationTitle(R.string.newMemory.title)
+            #if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
+            #endif
             .toolbar {
                 NewMemoryToolbar(
                     close: {

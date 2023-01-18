@@ -89,12 +89,14 @@ struct SettingsView: View {
                 role: .cancel
             ) { }
         }
+        #if os(iOS)
         .activityView(
             isPresented: $showingShareActivity,
             items: [
                 UseCases.shared.getJSONDocument(isCalled: showingShareActivity)
             ]
         )
+        #endif
         .navigationTitle(R.string.settings.title)
         .toolbar {
             SettingsToolbar()

@@ -52,7 +52,9 @@ struct AboutDeveloperView: View {
                 Spacer()
             }
             .navigationTitle(R.string.aboutDeveloper.title)
+            #if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
+            #endif
             .toolbar {
                 JustCloseToolbar(close: {
                     self.dismiss()
