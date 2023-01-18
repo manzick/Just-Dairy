@@ -26,7 +26,8 @@ class Memory: Codable, Hashable, Equatable {
     }
     
     init(fromMemoreObject memoryObject: MemoryObject) {
-        self.title = memoryObject.title ?? R.string.model.noName
+        self.title = memoryObject.title ?? ""
+        title = title != "" ? title : R.string.model.noName
         self.message = memoryObject.message ?? ""
         self.id = memoryObject.id ?? UUID()
         self.date = memoryObject.date ?? Date()
@@ -36,7 +37,7 @@ class Memory: Codable, Hashable, Equatable {
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.id = (try? container.decode(UUID.self, forKey: .id)) ?? UUID()
-        self.title = (try? container.decode(String.self, forKey: .title)) ?? ""
+        self.title = (try? container.decode(String.self, forKey: .title)) ?? R.string.model.noName
         self.message = (try? container.decode(String.self, forKey: .message)) ?? ""
         self.date = (try? container.decode(Date.self, forKey: .date)) ?? Date()
         self.isFavorite = (try? container.decode(Bool.self, forKey: .isFavorite)) ?? false

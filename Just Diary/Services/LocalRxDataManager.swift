@@ -32,21 +32,25 @@ class LocalRxDataManager {
     }
     
     public func removeMemory(byId id: UUID) {
-        guard let memory = memories.value.first(where: {$0.id == id}) else { return }
         var tempMemories = self.memories.value
         tempMemories.removeAll(where: {$0.id == id})
         self.memories.accept(tempMemories)
-        DatabaseDataManager.shared.delete(memory: memory)
+        DatabaseDataManager.shared.deleteMemory(byId: id)
     }
     
     public func replaceMemories(_  memories: [Memory]) {
-        self.memories.accept(memories)
+        for memory in self.memories.value {
+            self.removeMemory(byId: memory.id)
+        }
+        for memory in memories {
+            self.addMemory(memory)
+        }
     }
     
     public func mergeMemories(_  memories: [Memory]) {
-        let oldMemories = self.memories.value
-        let mergedMemories = Array(Set(oldMemories + memories))
-        self.memories.accept(mergedMemories)
+        for memory in memories {
+            self.addMemory(memory)
+        }
     }
 
     

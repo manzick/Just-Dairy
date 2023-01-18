@@ -11,4 +11,9 @@ extension String {
     public func localize() -> String {
         return Bundle.main.localizedString(forKey: self, value: nil, table: nil)
     }
+
+    func firstCharOnly() -> String {
+        return prefix(1).uppercased() + self.dropFirst()
+    }
+    
 }

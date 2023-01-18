@@ -43,6 +43,7 @@ struct DayList: View {
                     message: day.message
                 )
             }
+            .foregroundColor(.black)
             
         }
         .sheet(isPresented: $showSheetView) {

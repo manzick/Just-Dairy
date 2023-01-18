@@ -15,9 +15,10 @@ struct DayRow: View {
 
     var body: some View {
         VStack {
-            Text(title)
+            Text(title.firstCharOnly())
                 .font(.system(size: 36, weight: .semibold))
                 .foregroundColor(R.color.dayTitle)
+                .lineLimit(2)
                 .frame(maxWidth: .infinity, alignment: .leading)
 
             Text(date)
@@ -26,7 +27,7 @@ struct DayRow: View {
                 .padding(.bottom, 1)
             
             Text(message)
-                .lineLimit(1)
+                .lineLimit(3)
                 .frame(maxWidth: .infinity, alignment: .leading)
 
         }
@@ -37,7 +38,7 @@ struct DayRow: View {
 struct DayRow_Previews: PreviewProvider {
     static var previews: some View {
         DayRow(
-            title: "Очень умное название",
+            title: "очень умное название и длинное",
             date: "02.16.2022",
             message: "Ну я пока все тут же. Из планов только «не праздновать следующий НГ в Казахстане, и в принципе не хотелось бы видеть снег на след новый год»")
             .previewLayout(.fixed(width: 500, height: 120))
