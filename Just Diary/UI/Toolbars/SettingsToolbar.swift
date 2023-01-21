@@ -10,13 +10,31 @@ import SwiftUI
 struct SettingsToolbar: ToolbarContent {
     
     @State var showAboutDeveloperSV = false
+    @State var showStatisticSV = false
+    
+    let close: () -> Void
 
     var body: some ToolbarContent {
     #if os(iOS)
+        ToolbarItem(placement: .navigationBarLeading) {
+            Button(action: {
+                self.close()
+            }) {
+                Image(systemName: "multiply").imageScale(.large)
+            }
+        }
+        ToolbarItem(placement: .navigationBarLeading) {
+            Button(action: {
+                self.showStatisticSV.toggle()
+            }) {
+                Image(systemName: "info.circle").imageScale(.large)
+            }.sheet(isPresented: $showStatisticSV) {
+                StatisticView()
+            }
+        }
         ToolbarItem(placement: .navigationBarTrailing) {
             Button(action: {
-                print()
-            self.showAboutDeveloperSV.toggle()
+                self.showAboutDeveloperSV.toggle()
             }) {
                 Text(R.string.aboutDeveloper.title)
             }.sheet(isPresented: $showAboutDeveloperSV) {
@@ -35,7 +53,7 @@ struct SettingsToolbar_Previews: PreviewProvider {
         NavigationView {
             Text("")
                 .toolbar {
-                    SettingsToolbar()
+                    SettingsToolbar(close: {})
                 }
         }
     }

@@ -45,6 +45,7 @@ struct MemoryView: View {
                             LocalRxDataManager.shared.removeMemory(
                                 byId: dayStruct.id
                             )
+                            self.dismiss()
                         },
                         edit: {
                             

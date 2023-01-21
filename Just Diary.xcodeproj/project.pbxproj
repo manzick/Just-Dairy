@@ -51,6 +51,11 @@
 		B2BCE88129694D95001B8388 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BCE88029694D95001B8388 /* SettingsView.swift */; };
 		B2C7BC422975900600616953 /* MemoryViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C7BC412975900600616953 /* MemoryViewToolbar.swift */; };
 		B2C7BC442975937C00616953 /* MemoryObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C7BC432975937C00616953 /* MemoryObject+Extension.swift */; };
+		B2FE740E297C31360038971F /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FE740D297C31360038971F /* StatisticView.swift */; };
+		B2FE7410297C337C0038971F /* StatisticRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FE740F297C337C0038971F /* StatisticRow.swift */; };
+		B2FE7413297C347A0038971F /* GetMemoriesCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FE7412297C347A0038971F /* GetMemoriesCount.swift */; };
+		B2FE7415297C35600038971F /* GetWordsCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FE7414297C35600038971F /* GetWordsCount.swift */; };
+		B2FE7417297C36710038971F /* GetYearCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FE7416297C36710038971F /* GetYearCount.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +104,11 @@
 		B2BCE88029694D95001B8388 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B2C7BC412975900600616953 /* MemoryViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryViewToolbar.swift; sourceTree = "<group>"; };
 		B2C7BC432975937C00616953 /* MemoryObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemoryObject+Extension.swift"; sourceTree = "<group>"; };
+		B2FE740D297C31360038971F /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
+		B2FE740F297C337C0038971F /* StatisticRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticRow.swift; sourceTree = "<group>"; };
+		B2FE7412297C347A0038971F /* GetMemoriesCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMemoriesCount.swift; sourceTree = "<group>"; };
+		B2FE7414297C35600038971F /* GetWordsCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWordsCount.swift; sourceTree = "<group>"; };
+		B2FE7416297C36710038971F /* GetYearCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetYearCount.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +185,8 @@
 			children = (
 				B28DB6E129695D3C0033DEE8 /* AboutDeveloperView.swift */,
 				B21B21AA29753F8F0092FFD6 /* MemoryView.swift */,
+				B2BCE88029694D95001B8388 /* SettingsView.swift */,
+				B2FE740D297C31360038971F /* StatisticView.swift */,
 			);
 			path = SheetViews;
 			sourceTree = "<group>";
@@ -257,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				B2BCE871296700DA001B8388 /* DayRow.swift */,
+				B2FE740F297C337C0038971F /* StatisticRow.swift */,
 			);
 			path = ListRows;
 			sourceTree = "<group>";
@@ -274,6 +287,7 @@
 		B2BCE87929673829001B8388 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				B2FE7411297C34610038971F /* Statistic */,
 				B2BCE87A2967383B001B8388 /* GetClearData.swift */,
 				B252B7C6296DBBFE0093DF14 /* GetYearFromDate.swift */,
 				B252B7C8296DBCA30093DF14 /* GetMonthFromDate.swift */,
@@ -286,10 +300,19 @@
 		B2BCE87F29694D68001B8388 /* FullScreenViews */ = {
 			isa = PBXGroup;
 			children = (
-				B2BCE88029694D95001B8388 /* SettingsView.swift */,
 				B28DB6F92969ADB90033DEE8 /* NewMemoryView.swift */,
 			);
 			path = FullScreenViews;
+			sourceTree = "<group>";
+		};
+		B2FE7411297C34610038971F /* Statistic */ = {
+			isa = PBXGroup;
+			children = (
+				B2FE7412297C347A0038971F /* GetMemoriesCount.swift */,
+				B2FE7414297C35600038971F /* GetWordsCount.swift */,
+				B2FE7416297C36710038971F /* GetYearCount.swift */,
+			);
+			path = Statistic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,6 +400,8 @@
 				B21B2196297042CE0092FFD6 /* JSONDataManager.swift in Sources */,
 				B2BCE87E29694288001B8388 /* MainData.xcdatamodeld in Sources */,
 				B252B7C7296DBBFE0093DF14 /* GetYearFromDate.swift in Sources */,
+				B2FE7417297C36710038971F /* GetYearCount.swift in Sources */,
+				B2FE7410297C337C0038971F /* StatisticRow.swift in Sources */,
 				B21B2192297004AF0092FFD6 /* SettingsToolbar.swift in Sources */,
 				B252B7C9296DBCA30093DF14 /* GetMonthFromDate.swift in Sources */,
 				B21B219429703C630092FFD6 /* DatabaseDataManager.swift in Sources */,
@@ -386,6 +411,7 @@
 				B28DB6E229695D3C0033DEE8 /* AboutDeveloperView.swift in Sources */,
 				B266ECF1295C90FA008F70DB /* MainList.swift in Sources */,
 				B266ECEF295C90FA008F70DB /* Just_DiaryApp.swift in Sources */,
+				B2FE740E297C31360038971F /* StatisticView.swift in Sources */,
 				B2BC896F296D6D0D00B36BD4 /* Memory.swift in Sources */,
 				B21B2189296FD3D30092FFD6 /* ProvidingDataManager.swift in Sources */,
 				B2BC8972296D6EC200B36BD4 /* Resources.swift in Sources */,
@@ -396,6 +422,7 @@
 				B21B21A72972B40E0092FFD6 /* View+Extension.swift in Sources */,
 				B2BC897A296DA87400B36BD4 /* RangeReplaceableCollection+Extension.swift in Sources */,
 				B2BCE872296700DA001B8388 /* DayRow.swift in Sources */,
+				B2FE7415297C35600038971F /* GetWordsCount.swift in Sources */,
 				B2BCE87B2967383B001B8388 /* GetClearData.swift in Sources */,
 				B2C7BC442975937C00616953 /* MemoryObject+Extension.swift in Sources */,
 				B2BCE86C2966F722001B8388 /* DayStruct.swift in Sources */,
@@ -406,6 +433,7 @@
 				B28DB6FA2969ADB90033DEE8 /* NewMemoryView.swift in Sources */,
 				B21B21A52972AC2B0092FFD6 /* ActivityView.swift in Sources */,
 				B21B21A129729ED10092FFD6 /* JSONDocument.swift in Sources */,
+				B2FE7413297C347A0038971F /* GetMemoriesCount.swift in Sources */,
 				B2BCE8662966E012001B8388 /* YearAndMonthStruct.swift in Sources */,
 				B27321B2297578A20025E749 /* FindTriggeredObj.swift in Sources */,
 				B2BCE875296705D9001B8388 /* Color.swift in Sources */,

@@ -27,7 +27,9 @@ extension R {
         }
         struct settings {
             static let title = "Settings".localize()
-            static let cloudHeader = "Backup to iCloud (now to files)".localize()
+            static let cloudHeader = "Auto backup".localize()
+            static let jsonHeader = "jsonHeader".localize()
+            static let jsonFooter = "jsonFooter".localize()
             static let load = "Load".localize()
             static let save = "Save".localize()
             static let loadDialogTitle = "loadDialogTitle".localize()
@@ -35,13 +37,26 @@ extension R {
             static let rewrite = "Rewrite".localize()
             static let loadDataFailed = "Load data from JSON failed".localize()
         }
+        struct statistic {
+            static let title = "Statistic".localize()
+            static let memoriesCount = "memoriesCount".localize()
+            static let wordsCount = "wordsCount".localize()
+            static let yearCount = "yearCount".localize()
+        }
         struct newMemory {
             static let title = "New memory".localize()
             static let save = "newMemory.Save".localize()
+            static let titlePlaceHolder = "titlePlaceHolder".localize()
+            static let datePlaceHolder = "datePlaceHolder".localize()
         }
         struct newMemoryToolbar {
             static let exitAlertTitle = "exitAlertTitle".localize()
             static let exitAlertButton = "exitAlertButton".localize()
+        }
+        struct memoryViewToolbar {
+            static let edit = "edit".localize()
+            static let deleteAlertTitle = "deleteAlertTitle".localize()
+            static let deleteAlertButton = "deleteAlertButton".localize()
         }
     }
 }

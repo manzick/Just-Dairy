@@ -12,6 +12,8 @@ struct MemoryViewToolbar: ToolbarContent {
     let close: () -> Void
     let delete: () -> Void
     let edit: () -> Void
+    
+    @State private var deleteConfirmation = false
 
     var body: some ToolbarContent {
     #if os(iOS)
@@ -24,18 +26,30 @@ struct MemoryViewToolbar: ToolbarContent {
         }
         ToolbarItem(placement: .navigationBarLeading) {
             Button(action: {
-                self.delete()
+                deleteConfirmation = true
             }) {
                 Image(systemName: "trash")
                     .imageScale(.large)
                     .foregroundColor(.red)
+            }
+            .confirmationDialog(
+                R.string.memoryViewToolbar.deleteAlertTitle,
+                isPresented: $deleteConfirmation,
+                titleVisibility: .visible
+            ) {
+                Button(
+                    R.string.memoryViewToolbar.deleteAlertButton,
+                    role: .destructive
+                ) {
+                    self.delete()
+                }
             }
         }
         ToolbarItem(placement: .navigationBarTrailing) {
             Button(action: {
                 self.edit()
             }) {
-                Text("Edit")
+                Text(R.string.memoryViewToolbar.edit)
             }
         }
     #else

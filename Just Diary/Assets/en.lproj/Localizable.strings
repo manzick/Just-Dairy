@@ -20,13 +20,22 @@
 
 
 /* New Memory Toolbar========================================== */
-"exitAlertTitle" = "Are you sure you want to exit without saving?";
+"exitAlertTitle" = "Are you sure want to exit without saving?";
 "exitAlertButton" = "Exit";
+/* ============================================================ */
+
+
+/* Memory View Toolbar========================================= */
+"edit" = "Edit";
+"deleteAlertTitle" = "Are you sure want to remove this memory?";
+"deleteAlertButton" = "Remove";
 /* ============================================================ */
 
 
 /* New Memory ================================================= */
 "New memory" = "New memory";
+"titlePlaceHolder" = "Type title of memory";
+"datePlaceHolder" = "Select a date";
 /* ============================================================ */
 
 
@@ -38,11 +47,21 @@
 
 /* Settings =================================================== */
 "Settings" = "Settings";
-"Backup to iCloud (now to files)" = "Backup to iCloud (now to files)";
+"Auto backup" = "Auto backup";
 "Load" = "Load";
 "Save" = "Save";
 "loadDialogTitle" = "Do you want to merge new data with old data or overwrite?";
 "Merge" = "Merge";
 "Rewrite" = "Rewrite";
 "Load data from JSON failed" = "Load data from JSON failed";
+"jsonHeader" = "json backup";
+"jsonFooter" = "Your data belongs to you. If you want to leave us, you can import all entries in a relatively standard format";
+/* ============================================================ */
+
+
+/* Statistic ================================================== */
+"Statistic" = "Statistics";
+"memoriesCount" = "Number of memories";
+"wordsCount" = "Number of words in memories";
+"yearCount" = "Number of years, with memories";
 /* ============================================================ */

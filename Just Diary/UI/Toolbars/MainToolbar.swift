@@ -16,10 +16,12 @@ struct MainToolbar: ToolbarContent {
     var body: some ToolbarContent {
     #if os(iOS)
         ToolbarItem(placement: .navigationBarLeading) {
-            NavigationLink {
-                SettingsView()
-            } label: {
+            Button(action: {
+                self.showSettingsMacOSSV.toggle()
+            }) {
                 Image(systemName: "gear").imageScale(.large)
+            }.sheet(isPresented: $showSettingsMacOSSV) {
+                SettingsView()
             }
         }
         ToolbarItem(placement: .navigationBarTrailing) {
@@ -34,8 +36,7 @@ struct MainToolbar: ToolbarContent {
     #else
         ToolbarItem(placement: .primaryAction) {
             Button(action: {
-                print()
-            self.showSettingsMacOSSV.toggle()
+                self.showSettingsMacOSSV.toggle()
             }) {
                 Image(systemName: "gear").imageScale(.large)
             }.sheet(isPresented: $showSettingsMacOSSV) {

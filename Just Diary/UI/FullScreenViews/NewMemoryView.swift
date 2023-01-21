@@ -21,14 +21,14 @@ struct NewMemoryView: View {
             List {
                 Section{
                     TextField(
-                        "Type title of memory",
+                        R.string.newMemory.titlePlaceHolder,
                         text: $title
                     )
                     DatePicker(
                         selection: $datePickerDate,
                         in: ...Date.now,
                         displayedComponents: .date) {
-                            Text("Select a date")
+                            Text(R.string.newMemory.datePlaceHolder)
                         }
                 }
                 .onTapGesture {
