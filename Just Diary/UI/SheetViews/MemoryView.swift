@@ -52,7 +52,8 @@ struct MemoryView: View {
                         Memory(
                             date: Date.now,
                             title: self.dayStruct.title,
-                            message: self.dayStruct.message
+                            message: self.dayStruct.message,
+                            id: self.dayStruct.id
                         )
                     )
                 }

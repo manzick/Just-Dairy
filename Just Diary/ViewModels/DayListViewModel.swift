@@ -21,7 +21,6 @@ extension DayList {
             LocalRxDataManager
                 .shared
                 .getMemories()
-                .debug("MANZICK")
                 .subscribe { [weak self] memories in
                     guard let self else { return }
                     let currentMemories = memories.filter { memory in
@@ -38,6 +37,7 @@ extension DayList {
                         value.append(day)
                     }
                     self.daysList = value
+//                    self.daysList = [DayStruct(title: "Ghbdtn", message: "MANZICK", date: "kusgdf", id: UUID())]
                 }
                 .disposed(by: self.disposeBag)
         }

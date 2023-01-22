@@ -58,6 +58,7 @@ struct MemoryViewToolbar: ToolbarContent {
                     title: self.currentMemory.title,
                     message: self.currentMemory.message,
                     datePickerDate: self.currentMemory.date,
+                    id: self.currentMemory.id,
                     isEdit: true
                 )
             }

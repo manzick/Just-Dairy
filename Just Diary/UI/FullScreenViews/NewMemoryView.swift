@@ -14,6 +14,7 @@ struct NewMemoryView: View {
     @State var title = ""
     @State var message = ""
     @State var datePickerDate = Date.now
+    @State var id = UUID()
     
     @State var isEdit = false
 
@@ -53,6 +54,7 @@ struct NewMemoryView: View {
                             title: self.title,
                             message: self.message,
                             date: self.datePickerDate,
+                            id: self.id,
                             isEdit: self.isEdit
                         )
                         self.presentationMode.wrappedValue.dismiss()

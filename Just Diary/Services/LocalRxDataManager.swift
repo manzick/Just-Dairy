@@ -25,6 +25,13 @@ class LocalRxDataManager {
         return memory
     }
     
+    public func setMemoryFavorite(_ value: Bool = true, byId id: UUID) {
+        guard let memory = self.getMemory(byId: id) else { return }
+        memory.isFavorite = value
+        self.removeMemory(byId: id)
+        self.addMemory(memory)
+    }
+    
     public func addMemory(_ memory: Memory) {
         var tempMemories = self.memories.value
         tempMemories.append(memory)

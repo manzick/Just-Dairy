@@ -15,12 +15,12 @@ class Memory: Codable, Hashable, Equatable {
     public var message: String
     public let id: UUID
     public let date: Date
-    public let isFavorite: Bool
+    public var isFavorite: Bool
     
-    init(date: Date, title: String, message: String, isFavorite: Bool = false) {
+    init(date: Date, title: String, message: String, id: UUID = UUID(), isFavorite: Bool = false) {
         self.title = title
         self.message = message
-        self.id = UUID()
+        self.id = id
         self.date = date
         self.isFavorite = isFavorite
     }

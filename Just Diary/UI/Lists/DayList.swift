@@ -33,11 +33,27 @@ struct DayList: View {
                 DayRow(
                     title: day.title,
                     date: day.date,
-                    message: day.message,
-                    id: day.id
+                    message: day.message
                 )
             }
-            .foregroundColor(R.color.dayTitle)
+            .swipeActions {
+                Button(action: {
+                    LocalRxDataManager.shared.removeMemory(
+                        byId: day.id
+                    )
+                }) {
+                    Image(systemName: "trash").imageScale(.large)
+                }
+                .tint(.red)
+                
+                Button(action: {
+                    LocalRxDataManager.shared.setMemoryFavorite(byId: day.id)
+                }) {
+                    Image(systemName: "star.fill").imageScale(.large)
+                }
+                .tint(.blue)
+            }
+            
         }
         .sheet(isPresented: $showSheetView) {
             let day = UseCases.shared.findTriggeredObj(in: viewModel.daysList)
