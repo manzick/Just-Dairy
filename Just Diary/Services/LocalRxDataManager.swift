@@ -19,6 +19,12 @@ class LocalRxDataManager {
         return self.memories
     }
     
+    public func getMemory(byId id: UUID) -> Memory? {
+        let memories = self.memories.value
+        let memory = memories.first(where: {$0.id == id})
+        return memory
+    }
+    
     public func addMemory(_ memory: Memory) {
         var tempMemories = self.memories.value
         tempMemories.append(memory)
@@ -26,8 +32,8 @@ class LocalRxDataManager {
         DatabaseDataManager.shared.saveData(memory: memory)
     }
     
-    public func addMemory(title: String, message: String, date: Date) {
-        let memory = Memory(date: date, title: title, message: message)
+    public func updateMemory(_ memory: Memory) {
+        self.removeMemory(byId: memory.id)
         self.addMemory(memory)
     }
     

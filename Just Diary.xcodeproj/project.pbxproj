@@ -36,6 +36,10 @@
 		B28DB6F12969871D0033DEE8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B28DB6F32969871D0033DEE8 /* Localizable.strings */; };
 		B28DB6F8296987B70033DEE8 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28DB6F7296987B70033DEE8 /* String+Extension.swift */; };
 		B28DB6FA2969ADB90033DEE8 /* NewMemoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28DB6F92969ADB90033DEE8 /* NewMemoryView.swift */; };
+		B2AC2553297D08D700B8E3B9 /* SaveMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AC2552297D08D700B8E3B9 /* SaveMemory.swift */; };
+		B2AC2556297D123000B8E3B9 /* MainListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AC2555297D123000B8E3B9 /* MainListViewModel.swift */; };
+		B2AC2558297D154300B8E3B9 /* DayListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AC2557297D154300B8E3B9 /* DayListViewModel.swift */; };
+		B2AC255A297D8B1C00B8E3B9 /* ObservableType+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AC2559297D8B1C00B8E3B9 /* ObservableType+Extension.swift */; };
 		B2BC896A296D509300B36BD4 /* LocalRxDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BC8969296D509300B36BD4 /* LocalRxDataManager.swift */; };
 		B2BC896F296D6D0D00B36BD4 /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BC896E296D6D0D00B36BD4 /* Memory.swift */; };
 		B2BC8972296D6EC200B36BD4 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BC8971296D6EC200B36BD4 /* Resources.swift */; };
@@ -56,6 +60,7 @@
 		B2FE7413297C347A0038971F /* GetMemoriesCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FE7412297C347A0038971F /* GetMemoriesCount.swift */; };
 		B2FE7415297C35600038971F /* GetWordsCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FE7414297C35600038971F /* GetWordsCount.swift */; };
 		B2FE7417297C36710038971F /* GetYearCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FE7416297C36710038971F /* GetYearCount.swift */; };
+		B2FE7419297C41860038971F /* UIScreen+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FE7418297C41860038971F /* UIScreen+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +94,10 @@
 		B28DB6F4296987320033DEE8 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B28DB6F7296987B70033DEE8 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		B28DB6F92969ADB90033DEE8 /* NewMemoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMemoryView.swift; sourceTree = "<group>"; };
+		B2AC2552297D08D700B8E3B9 /* SaveMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveMemory.swift; sourceTree = "<group>"; };
+		B2AC2555297D123000B8E3B9 /* MainListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListViewModel.swift; sourceTree = "<group>"; };
+		B2AC2557297D154300B8E3B9 /* DayListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayListViewModel.swift; sourceTree = "<group>"; };
+		B2AC2559297D8B1C00B8E3B9 /* ObservableType+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+Extension.swift"; sourceTree = "<group>"; };
 		B2BC8969296D509300B36BD4 /* LocalRxDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRxDataManager.swift; sourceTree = "<group>"; };
 		B2BC896E296D6D0D00B36BD4 /* Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
 		B2BC8971296D6EC200B36BD4 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
@@ -109,6 +118,7 @@
 		B2FE7412297C347A0038971F /* GetMemoriesCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMemoriesCount.swift; sourceTree = "<group>"; };
 		B2FE7414297C35600038971F /* GetWordsCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWordsCount.swift; sourceTree = "<group>"; };
 		B2FE7416297C36710038971F /* GetYearCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetYearCount.swift; sourceTree = "<group>"; };
+		B2FE7418297C41860038971F /* UIScreen+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +173,7 @@
 				B28DB6F6296987770033DEE8 /* Extensions */,
 				B2BC896D296D6CF200B36BD4 /* Models */,
 				B2BCE8642966DC02001B8388 /* ModelsStructUI */,
+				B2AC2554297D121A00B8E3B9 /* ViewModels */,
 				B2BCE8632966D900001B8388 /* UI */,
 				B266ECEE295C90FA008F70DB /* Just_DiaryApp.swift */,
 				B266ECF4295C90FC008F70DB /* Just_Diary.entitlements */,
@@ -208,8 +219,19 @@
 				B21B21A42972AC2B0092FFD6 /* ActivityView.swift */,
 				B21B21A62972B40E0092FFD6 /* View+Extension.swift */,
 				B2C7BC432975937C00616953 /* MemoryObject+Extension.swift */,
+				B2FE7418297C41860038971F /* UIScreen+Extension.swift */,
+				B2AC2559297D8B1C00B8E3B9 /* ObservableType+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B2AC2554297D121A00B8E3B9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B2AC2555297D123000B8E3B9 /* MainListViewModel.swift */,
+				B2AC2557297D154300B8E3B9 /* DayListViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		B2BC896D296D6CF200B36BD4 /* Models */ = {
@@ -293,6 +315,7 @@
 				B252B7C8296DBCA30093DF14 /* GetMonthFromDate.swift */,
 				B21B21A829753CA60092FFD6 /* GetJSONDocument.swift */,
 				B27321B1297578A20025E749 /* FindTriggeredObj.swift */,
+				B2AC2552297D08D700B8E3B9 /* SaveMemory.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -402,6 +425,7 @@
 				B252B7C7296DBBFE0093DF14 /* GetYearFromDate.swift in Sources */,
 				B2FE7417297C36710038971F /* GetYearCount.swift in Sources */,
 				B2FE7410297C337C0038971F /* StatisticRow.swift in Sources */,
+				B2AC2558297D154300B8E3B9 /* DayListViewModel.swift in Sources */,
 				B21B2192297004AF0092FFD6 /* SettingsToolbar.swift in Sources */,
 				B252B7C9296DBCA30093DF14 /* GetMonthFromDate.swift in Sources */,
 				B21B219429703C630092FFD6 /* DatabaseDataManager.swift in Sources */,
@@ -420,7 +444,9 @@
 				B2BCE86E2966FF73001B8388 /* DayList.swift in Sources */,
 				B28DB6E4296961E40033DEE8 /* Image.swift in Sources */,
 				B21B21A72972B40E0092FFD6 /* View+Extension.swift in Sources */,
+				B2FE7419297C41860038971F /* UIScreen+Extension.swift in Sources */,
 				B2BC897A296DA87400B36BD4 /* RangeReplaceableCollection+Extension.swift in Sources */,
+				B2AC2556297D123000B8E3B9 /* MainListViewModel.swift in Sources */,
 				B2BCE872296700DA001B8388 /* DayRow.swift in Sources */,
 				B2FE7415297C35600038971F /* GetWordsCount.swift in Sources */,
 				B2BCE87B2967383B001B8388 /* GetClearData.swift in Sources */,
@@ -432,11 +458,13 @@
 				B28DB6E62969817D0033DEE8 /* String.swift in Sources */,
 				B28DB6FA2969ADB90033DEE8 /* NewMemoryView.swift in Sources */,
 				B21B21A52972AC2B0092FFD6 /* ActivityView.swift in Sources */,
+				B2AC255A297D8B1C00B8E3B9 /* ObservableType+Extension.swift in Sources */,
 				B21B21A129729ED10092FFD6 /* JSONDocument.swift in Sources */,
 				B2FE7413297C347A0038971F /* GetMemoriesCount.swift in Sources */,
 				B2BCE8662966E012001B8388 /* YearAndMonthStruct.swift in Sources */,
 				B27321B2297578A20025E749 /* FindTriggeredObj.swift in Sources */,
 				B2BCE875296705D9001B8388 /* Color.swift in Sources */,
+				B2AC2553297D08D700B8E3B9 /* SaveMemory.swift in Sources */,
 				B21B218C296FF9740092FFD6 /* NewMemoryToolbar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

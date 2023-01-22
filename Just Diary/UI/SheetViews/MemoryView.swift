@@ -47,9 +47,13 @@ struct MemoryView: View {
                             )
                             self.dismiss()
                         },
-                        edit: {
-                            
-                        }
+                        currentMemory:
+                            LocalRxDataManager.shared.getMemory(byId: self.dayStruct.id) ??
+                        Memory(
+                            date: Date.now,
+                            title: self.dayStruct.title,
+                            message: self.dayStruct.message
+                        )
                     )
                 }
         }

@@ -9,45 +9,38 @@ import SwiftUI
 
 struct DayList: View {
     @State public var title: String
-    @State public var days: [DayStruct]
     
     @State var showSheetView: Bool = false
     @State var clickIdString: String?
     
-//    @State var showMemorySV = false
+    @StateObject public var viewModel: ViewModel
     
-    init(title: String, days: [DayStruct]) {
-        self.title = title
-        self.days = days
+    init(month: String, year: String) {
+        self.title = "\(month) \(year)"
+        _viewModel = StateObject(
+            wrappedValue: ViewModel(
+                month: month,
+                year: year
+            ))
     }
 
     var body: some View {
-        List(days) { day in
-//            NavigationLink {
-////                MonthList(title: mob.id)
-//            } label: {
-//                DayRow(
-//                    title: day.title,
-//                    date: day.date,
-//                    message: day.message
-//                )
-//            }
+        List(viewModel.daysList) { day in
             Button(action: {
                 self.showSheetView.toggle()
                 ProvidingDataManager.shared.clickDayIdString = day.id.uuidString
-                print()
             }) {
                 DayRow(
                     title: day.title,
                     date: day.date,
-                    message: day.message
+                    message: day.message,
+                    id: day.id
                 )
             }
             .foregroundColor(R.color.dayTitle)
-            
         }
         .sheet(isPresented: $showSheetView) {
-            let day = UseCases.shared.findTriggeredObj(in: self.days)
+            let day = UseCases.shared.findTriggeredObj(in: viewModel.daysList)
             MemoryView(dayStruct: day)
         }
         .navigationTitle(title)
@@ -58,15 +51,8 @@ struct DayList_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             DayList(
-                title: "January 2023",
-                days: [
-                    DayStruct(
-                        title: "Заголовок",
-                        message: "Сообщение",
-                        date: "January 15",
-                        id: UUID()
-                    )
-                ]
+                month: "January",
+                year: "2023"
             )
         }
     }

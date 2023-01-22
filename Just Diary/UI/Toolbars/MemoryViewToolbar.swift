@@ -11,9 +11,11 @@ struct MemoryViewToolbar: ToolbarContent {
     
     let close: () -> Void
     let delete: () -> Void
-    let edit: () -> Void
+    
+    let currentMemory: Memory
     
     @State private var deleteConfirmation = false
+    @State private var showNewMemoryModal = false
 
     var body: some ToolbarContent {
     #if os(iOS)
@@ -47,9 +49,17 @@ struct MemoryViewToolbar: ToolbarContent {
         }
         ToolbarItem(placement: .navigationBarTrailing) {
             Button(action: {
-                self.edit()
+                self.showNewMemoryModal = true
             }) {
                 Text(R.string.memoryViewToolbar.edit)
+            }
+            .fullScreenCover(isPresented: $showNewMemoryModal) {
+                NewMemoryView(
+                    title: self.currentMemory.title,
+                    message: self.currentMemory.message,
+                    datePickerDate: self.currentMemory.date,
+                    isEdit: true
+                )
             }
         }
     #else
@@ -67,7 +77,11 @@ struct MemoryViewToolbar_Previews: PreviewProvider {
                     MemoryViewToolbar(
                         close: {},
                         delete: {},
-                        edit: {}
+                        currentMemory: Memory(
+                            date: Date(),
+                            title: "Test title",
+                            message: "temp message"
+                        )
                     )
                 }
         }

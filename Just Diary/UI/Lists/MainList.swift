@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct MainList: View {
- 
-    @ObservedObject private var providingDataManager = ProvidingDataManager.shared
+    
+    @StateObject private var viewModel = ViewModel()
 
     var body: some View {
         NavigationView {
             List(
-                providingDataManager.yearsListWithMonth,
+                viewModel.yearsListWithMonth,
                 children: \.months
             ) { item in
                 if item.months != nil {
@@ -22,11 +22,8 @@ struct MainList: View {
                 } else {
                     NavigationLink {
                         DayList(
-                            title: "\(item.name) \(item.year)",
-                            days: providingDataManager.getDaysList(
-                                forMonth: item.name,
-                                andYear: item.year
-                            )
+                            month: item.name,
+                            year: item.year
                         )
                     } label: {
                         Text(item.name)

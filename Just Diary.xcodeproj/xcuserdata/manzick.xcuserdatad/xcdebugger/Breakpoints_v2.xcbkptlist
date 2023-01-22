@@ -3,4 +3,54 @@
    uuid = "3AD104F0-1DD9-4F17-B2E8-643A1D206A57"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5FF8FE65-5716-47F7-AB54-DD401C5C59DD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Just Diary/UI/ListRows/DayRow.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "5FF8FE65-5716-47F7-AB54-DD401C5C59DD - c603b05cb6ef295c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #2 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.confirmationDialog&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.StringProtocol, &#x3c4;_1_1: SwiftUI.View&gt;(_: &#x3c4;_1_0, isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, titleVisibility: SwiftUI.Visibility, actions: () -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.tint(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0)&gt; in Just_Diary.DayRow.body.getter : some"
+                  moduleName = "Just Diary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/manzick/Projects/Just%20Diary/Just%20Diary/UI/ListRows/DayRow.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "360">
+               </Location>
+               <Location
+                  uuid = "5FF8FE65-5716-47F7-AB54-DD401C5C59DD - 375df4467cc5f731"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.imageScale(SwiftUI.Image.Scale) -&gt; some&gt;&gt;.0 in closure #2 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.confirmationDialog&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.StringProtocol, &#x3c4;_1_1: SwiftUI.View&gt;(_: &#x3c4;_1_0, isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, titleVisibility: SwiftUI.Visibility, actions: () -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.tint(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0)&gt; in Just_Diary.DayRow.body.getter : some"
+                  moduleName = "Just Diary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/manzick/Projects/Just%20Diary/Just%20Diary/UI/ListRows/DayRow.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "244">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

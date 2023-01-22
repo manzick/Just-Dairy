@@ -10,11 +10,12 @@ import SwiftUI
 struct NewMemoryView: View {
     
     @Environment(\.presentationMode) var presentationMode
-    @State private var exitItem: Bool?
     
     @State var title = ""
     @State var message = ""
-    @State private var datePickerDate = Date.now
+    @State var datePickerDate = Date.now
+    
+    @State var isEdit = false
 
     var body: some View {
         NavigationView {
@@ -30,9 +31,6 @@ struct NewMemoryView: View {
                         displayedComponents: .date) {
                             Text(R.string.newMemory.datePlaceHolder)
                         }
-                }
-                .onTapGesture {
-//                    hideKeyboard()
                 }
                 Section {
                     TextEditor(
@@ -51,10 +49,11 @@ struct NewMemoryView: View {
                         self.presentationMode.wrappedValue.dismiss()
                     },
                     save: {
-                        LocalRxDataManager.shared.addMemory(
+                        UseCases.shared.saveMemory(
                             title: self.title,
                             message: self.message,
-                            date: self.datePickerDate
+                            date: self.datePickerDate,
+                            isEdit: self.isEdit
                         )
                         self.presentationMode.wrappedValue.dismiss()
                     }
@@ -67,27 +66,7 @@ struct NewMemoryView: View {
 
 struct NewMemoryView_Previews: PreviewProvider {
     static var previews: some View {
+//        NewMemoryView(title: "Тест", isEdit: true)
         NewMemoryView()
     }
 }
-
-//extension View {
-//    func hideKeyboard() {
-//        let resign = #selector(UIResponder.resignFirstResponder)
-//        UIApplication.shared.sendAction(resign, to: nil, from: nil, for: nil)
-//    }
-//}
-
-//struct Background<Content: View>: View {
-//    private var content: Content
-//
-//    init(@ViewBuilder content: @escaping () -> Content) {
-//        self.content = content()
-//    }
-//
-//    var body: some View {
-//        Color.white
-//        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-//        .overlay(content)
-//    }
-//}
