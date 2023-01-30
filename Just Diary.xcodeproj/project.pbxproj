@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B21B2189296FD3D30092FFD6 /* ProvidingDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21B2188296FD3D30092FFD6 /* ProvidingDataManager.swift */; };
 		B21B218C296FF9740092FFD6 /* NewMemoryToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21B218B296FF9740092FFD6 /* NewMemoryToolbar.swift */; };
 		B21B218E2970004D0092FFD6 /* JustCloseToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21B218D2970004C0092FFD6 /* JustCloseToolbar.swift */; };
 		B21B2190297001FC0092FFD6 /* MainToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21B218F297001FC0092FFD6 /* MainToolbar.swift */; };
@@ -21,6 +20,7 @@
 		B21B21A929753CA60092FFD6 /* GetJSONDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21B21A829753CA60092FFD6 /* GetJSONDocument.swift */; };
 		B21B21AB29753F8F0092FFD6 /* MemoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21B21AA29753F8F0092FFD6 /* MemoryView.swift */; };
 		B21E89C8297599DB001F96AD /* MemoriesBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21E89C7297599DB001F96AD /* MemoriesBox.swift */; };
+		B220FF902987D5A000F052C3 /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B220FF8F2987D5A000F052C3 /* DayModel.swift */; };
 		B252B7C7296DBBFE0093DF14 /* GetYearFromDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B252B7C6296DBBFE0093DF14 /* GetYearFromDate.swift */; };
 		B252B7C9296DBCA30093DF14 /* GetMonthFromDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B252B7C8296DBCA30093DF14 /* GetMonthFromDate.swift */; };
 		B252B7D0296ED6860093DF14 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = B252B7CF296ED6860093DF14 /* RxCocoa */; };
@@ -64,7 +64,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B21B2188296FD3D30092FFD6 /* ProvidingDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvidingDataManager.swift; sourceTree = "<group>"; };
 		B21B218B296FF9740092FFD6 /* NewMemoryToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMemoryToolbar.swift; sourceTree = "<group>"; };
 		B21B218D2970004C0092FFD6 /* JustCloseToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustCloseToolbar.swift; sourceTree = "<group>"; };
 		B21B218F297001FC0092FFD6 /* MainToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainToolbar.swift; sourceTree = "<group>"; };
@@ -78,6 +77,7 @@
 		B21B21A829753CA60092FFD6 /* GetJSONDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetJSONDocument.swift; sourceTree = "<group>"; };
 		B21B21AA29753F8F0092FFD6 /* MemoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryView.swift; sourceTree = "<group>"; };
 		B21E89C7297599DB001F96AD /* MemoriesBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesBox.swift; sourceTree = "<group>"; };
+		B220FF8F2987D5A000F052C3 /* DayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
 		B252B7C6296DBBFE0093DF14 /* GetYearFromDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetYearFromDate.swift; sourceTree = "<group>"; };
 		B252B7C8296DBCA30093DF14 /* GetMonthFromDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMonthFromDate.swift; sourceTree = "<group>"; };
 		B266ECEB295C90FA008F70DB /* Just Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Just Diary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -250,7 +250,6 @@
 				B2BC8971296D6EC200B36BD4 /* Resources.swift */,
 				B2BC8973296D6EDC00B36BD4 /* UseCases.swift */,
 				B2BC8969296D509300B36BD4 /* LocalRxDataManager.swift */,
-				B21B2188296FD3D30092FFD6 /* ProvidingDataManager.swift */,
 				B21B219329703C630092FFD6 /* DatabaseDataManager.swift */,
 				B21B2195297042CE0092FFD6 /* JSONDataManager.swift */,
 			);
@@ -274,6 +273,7 @@
 			children = (
 				B2BCE8652966E012001B8388 /* YearAndMonthStruct.swift */,
 				B2BCE86B2966F722001B8388 /* DayStruct.swift */,
+				B220FF8F2987D5A000F052C3 /* DayModel.swift */,
 			);
 			path = ModelsStructUI;
 			sourceTree = "<group>";
@@ -437,7 +437,6 @@
 				B266ECEF295C90FA008F70DB /* Just_DiaryApp.swift in Sources */,
 				B2FE740E297C31360038971F /* StatisticView.swift in Sources */,
 				B2BC896F296D6D0D00B36BD4 /* Memory.swift in Sources */,
-				B21B2189296FD3D30092FFD6 /* ProvidingDataManager.swift in Sources */,
 				B2BC8972296D6EC200B36BD4 /* Resources.swift in Sources */,
 				B21B2190297001FC0092FFD6 /* MainToolbar.swift in Sources */,
 				B21E89C8297599DB001F96AD /* MemoriesBox.swift in Sources */,
@@ -455,6 +454,7 @@
 				B2C7BC422975900600616953 /* MemoryViewToolbar.swift in Sources */,
 				B2BCE88129694D95001B8388 /* SettingsView.swift in Sources */,
 				B2BC8974296D6EDC00B36BD4 /* UseCases.swift in Sources */,
+				B220FF902987D5A000F052C3 /* DayModel.swift in Sources */,
 				B28DB6E62969817D0033DEE8 /* String.swift in Sources */,
 				B28DB6FA2969ADB90033DEE8 /* NewMemoryView.swift in Sources */,
 				B21B21A52972AC2B0092FFD6 /* ActivityView.swift in Sources */,

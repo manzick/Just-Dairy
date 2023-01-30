@@ -5,6 +5,8 @@
 //  Created by Alexander Manzurov on 05.01.2023.
 //
 
+//ObservableObject
+
 import Foundation
 
 struct DayStruct: Identifiable {

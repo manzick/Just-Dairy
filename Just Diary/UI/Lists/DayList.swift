@@ -13,11 +13,11 @@ struct DayList: View {
     @State var showSheetView: Bool = false
     @State var clickIdString: String?
     
-    @StateObject public var viewModel: ViewModel
+    @ObservedObject public var viewModel: ViewModel
     
     init(month: String, year: String) {
         self.title = "\(month) \(year)"
-        _viewModel = StateObject(
+        _viewModel = ObservedObject(
             wrappedValue: ViewModel(
                 month: month,
                 year: year
@@ -28,13 +28,9 @@ struct DayList: View {
         List(viewModel.daysList) { day in
             Button(action: {
                 self.showSheetView.toggle()
-                ProvidingDataManager.shared.clickDayIdString = day.id.uuidString
+                viewModel.clickDayIdString = day.id.uuidString
             }) {
-                DayRow(
-                    title: day.title,
-                    date: day.date,
-                    message: day.message
-                )
+                DayRow(day: day)
             }
             .swipeActions {
                 Button(action: {
@@ -56,8 +52,11 @@ struct DayList: View {
             
         }
         .sheet(isPresented: $showSheetView) {
-            let day = UseCases.shared.findTriggeredObj(in: viewModel.daysList)
-            MemoryView(dayStruct: day)
+            let day = UseCases.shared.findTriggeredObj(
+                byId: viewModel.clickDayIdString,
+                in: viewModel.daysList
+            )
+            MemoryView(day: day)
         }
         .navigationTitle(title)
     }

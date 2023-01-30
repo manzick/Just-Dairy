@@ -8,12 +8,13 @@
 import Foundation
 
 extension UseCases {
-    func findTriggeredObj(in days: [DayStruct]) -> DayStruct {
+    func findTriggeredObj(byId idString: String?, in days: [DayModel]) -> DayModel {
+        guard let idString else { return DayModel(title: "", message: "", date: "", id: UUID()) }
         for day in days {
-            if day.id.uuidString == ProvidingDataManager.shared.clickDayIdString {
+            if day.id.uuidString == idString {
                 return day
             }
         }
-        return DayStruct(title: "", message: "", date: "", id: UUID())
+        return DayModel(title: "", message: "", date: "", id: UUID())
     }
 }
