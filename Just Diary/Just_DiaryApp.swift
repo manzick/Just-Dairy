@@ -14,5 +14,11 @@ struct Just_DiaryApp: App {
         WindowGroup {
             MainList()
         }
+        WindowGroup("NewMemory", id: R.window.newMemory) {
+            NewMemoryView()
+        }
+        WindowGroup("Settings", id: R.window.settings) {
+            SettingsView()
+        }
     }
 }

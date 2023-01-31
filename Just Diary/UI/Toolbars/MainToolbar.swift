@@ -10,17 +10,17 @@ import SwiftUI
 struct MainToolbar: ToolbarContent {
     
     @State private var showNewMemoryModal = false
-    
-    @State var showSettingsMacOSSV = false
+    @State var showSettingsSV = false
+    @Environment(\.openWindow) var openWindow
 
     var body: some ToolbarContent {
     #if os(iOS)
         ToolbarItem(placement: .navigationBarLeading) {
             Button(action: {
-                self.showSettingsMacOSSV.toggle()
+                self.showSettingsSV.toggle()
             }) {
                 Image(systemName: "gear").imageScale(.large)
-            }.sheet(isPresented: $showSettingsMacOSSV) {
+            }.sheet(isPresented: $showSettingsSV) {
                 SettingsView()
             }
         }
@@ -36,11 +36,16 @@ struct MainToolbar: ToolbarContent {
     #else
         ToolbarItem(placement: .primaryAction) {
             Button(action: {
-                self.showSettingsMacOSSV.toggle()
+                openWindow(id: R.window.settings)
             }) {
                 Image(systemName: "gear").imageScale(.large)
-            }.sheet(isPresented: $showSettingsMacOSSV) {
-                SettingsView()
+            }
+        }
+        ToolbarItem(placement: .secondaryAction) {
+            Button(action: {
+                openWindow(id: R.window.newMemory)
+            }) {
+                Image(systemName: "square.and.pencil").imageScale(.large)
             }
         }
     #endif
@@ -57,4 +62,3 @@ struct MainToolbar_Previews: PreviewProvider {
         }
     }
 }
-

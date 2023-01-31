@@ -21,6 +21,7 @@
 		B21B21AB29753F8F0092FFD6 /* MemoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21B21AA29753F8F0092FFD6 /* MemoryView.swift */; };
 		B21E89C8297599DB001F96AD /* MemoriesBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21E89C7297599DB001F96AD /* MemoriesBox.swift */; };
 		B220FF902987D5A000F052C3 /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B220FF8F2987D5A000F052C3 /* DayModel.swift */; };
+		B220FF922987F03200F052C3 /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = B220FF912987F03200F052C3 /* Window.swift */; };
 		B252B7C7296DBBFE0093DF14 /* GetYearFromDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B252B7C6296DBBFE0093DF14 /* GetYearFromDate.swift */; };
 		B252B7C9296DBCA30093DF14 /* GetMonthFromDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B252B7C8296DBCA30093DF14 /* GetMonthFromDate.swift */; };
 		B252B7D0296ED6860093DF14 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = B252B7CF296ED6860093DF14 /* RxCocoa */; };
@@ -46,7 +47,6 @@
 		B2BC8974296D6EDC00B36BD4 /* UseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BC8973296D6EDC00B36BD4 /* UseCases.swift */; };
 		B2BC897A296DA87400B36BD4 /* RangeReplaceableCollection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BC8979296DA87400B36BD4 /* RangeReplaceableCollection+Extension.swift */; };
 		B2BCE8662966E012001B8388 /* YearAndMonthStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BCE8652966E012001B8388 /* YearAndMonthStruct.swift */; };
-		B2BCE86C2966F722001B8388 /* DayStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BCE86B2966F722001B8388 /* DayStruct.swift */; };
 		B2BCE86E2966FF73001B8388 /* DayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BCE86D2966FF73001B8388 /* DayList.swift */; };
 		B2BCE872296700DA001B8388 /* DayRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BCE871296700DA001B8388 /* DayRow.swift */; };
 		B2BCE875296705D9001B8388 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BCE874296705D9001B8388 /* Color.swift */; };
@@ -78,6 +78,7 @@
 		B21B21AA29753F8F0092FFD6 /* MemoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryView.swift; sourceTree = "<group>"; };
 		B21E89C7297599DB001F96AD /* MemoriesBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesBox.swift; sourceTree = "<group>"; };
 		B220FF8F2987D5A000F052C3 /* DayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
+		B220FF912987F03200F052C3 /* Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
 		B252B7C6296DBBFE0093DF14 /* GetYearFromDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetYearFromDate.swift; sourceTree = "<group>"; };
 		B252B7C8296DBCA30093DF14 /* GetMonthFromDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMonthFromDate.swift; sourceTree = "<group>"; };
 		B266ECEB295C90FA008F70DB /* Just Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Just Diary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,7 +105,6 @@
 		B2BC8973296D6EDC00B36BD4 /* UseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCases.swift; sourceTree = "<group>"; };
 		B2BC8979296DA87400B36BD4 /* RangeReplaceableCollection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RangeReplaceableCollection+Extension.swift"; sourceTree = "<group>"; };
 		B2BCE8652966E012001B8388 /* YearAndMonthStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearAndMonthStruct.swift; sourceTree = "<group>"; };
-		B2BCE86B2966F722001B8388 /* DayStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayStruct.swift; sourceTree = "<group>"; };
 		B2BCE86D2966FF73001B8388 /* DayList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayList.swift; sourceTree = "<group>"; };
 		B2BCE871296700DA001B8388 /* DayRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayRow.swift; sourceTree = "<group>"; };
 		B2BCE874296705D9001B8388 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -272,7 +272,6 @@
 			isa = PBXGroup;
 			children = (
 				B2BCE8652966E012001B8388 /* YearAndMonthStruct.swift */,
-				B2BCE86B2966F722001B8388 /* DayStruct.swift */,
 				B220FF8F2987D5A000F052C3 /* DayModel.swift */,
 			);
 			path = ModelsStructUI;
@@ -302,6 +301,7 @@
 				B2BCE874296705D9001B8388 /* Color.swift */,
 				B28DB6E3296961E40033DEE8 /* Image.swift */,
 				B28DB6E52969817D0033DEE8 /* String.swift */,
+				B220FF912987F03200F052C3 /* Window.swift */,
 			);
 			path = Constatns;
 			sourceTree = "<group>";
@@ -450,7 +450,6 @@
 				B2FE7415297C35600038971F /* GetWordsCount.swift in Sources */,
 				B2BCE87B2967383B001B8388 /* GetClearData.swift in Sources */,
 				B2C7BC442975937C00616953 /* MemoryObject+Extension.swift in Sources */,
-				B2BCE86C2966F722001B8388 /* DayStruct.swift in Sources */,
 				B2C7BC422975900600616953 /* MemoryViewToolbar.swift in Sources */,
 				B2BCE88129694D95001B8388 /* SettingsView.swift in Sources */,
 				B2BC8974296D6EDC00B36BD4 /* UseCases.swift in Sources */,
@@ -466,6 +465,7 @@
 				B2BCE875296705D9001B8388 /* Color.swift in Sources */,
 				B2AC2553297D08D700B8E3B9 /* SaveMemory.swift in Sources */,
 				B21B218C296FF9740092FFD6 /* NewMemoryToolbar.swift in Sources */,
+				B220FF922987F03200F052C3 /* Window.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
