@@ -20,7 +20,7 @@ struct SettingsView: View {
     @State private var iCloudSync = true
 
     var body: some View {
-        NavigationStack {
+        NavigationView {
             List {
                 Section {
                     Toggle("iCloud", isOn: $iCloudSync)

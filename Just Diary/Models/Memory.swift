@@ -7,8 +7,6 @@
 
 import Foundation
 
-// TODO: NSObject больше не предок этого класса, подумать а не стало ли хуже?
-
 class Memory: Codable, Hashable, Equatable {
     
     public var title: String

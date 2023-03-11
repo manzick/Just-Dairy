@@ -11,7 +11,10 @@ struct MainToolbar: ToolbarContent {
     
     @State private var showNewMemoryModal = false
     @State var showSettingsSV = false
+    #if os(iOS)
+    #else
     @Environment(\.openWindow) var openWindow
+    #endif
 
     var body: some ToolbarContent {
     #if os(iOS)

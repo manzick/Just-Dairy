@@ -19,7 +19,7 @@ struct NewMemoryView: View {
     @State var isEdit = false
 
     var body: some View {
-        NavigationStack {
+        NavigationView {
             List {
                 Section{
                     TextField(
