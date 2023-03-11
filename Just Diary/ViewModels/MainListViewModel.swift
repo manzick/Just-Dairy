@@ -38,6 +38,7 @@ extension MainList {
                     if self.yearsListWithMonth != value {
                         self.yearsListWithMonth = value
                     }
+                    self.yearsListWithMonth.sort { $0.name > $1.name }
                 }
                 .disposed(by: self.disposeBag)
         }

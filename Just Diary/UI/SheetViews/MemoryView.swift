@@ -21,12 +21,14 @@ struct MemoryView: View {
                         Text(day.title)
                             .font(.system(size: 36, weight: .semibold))
                             .padding(.leading, 20)
+                            .textSelection(.enabled)
                         Spacer()
                     }
                     HStack{
                         Text(day.message)
                             .padding(.leading, 20)
                             .padding(.top, 5)
+                            .textSelection(.enabled)
                         Spacer()
                     }
                     Spacer()
