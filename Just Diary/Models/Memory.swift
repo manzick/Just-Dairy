@@ -14,13 +14,15 @@ class Memory: Codable, Hashable, Equatable {
     public let id: UUID
     public let date: Date
     public var isFavorite: Bool
+    public var tags: [String]
     
-    init(date: Date, title: String, message: String, id: UUID = UUID(), isFavorite: Bool = false) {
+    init(date: Date, title: String, message: String, id: UUID = UUID(), isFavorite: Bool = false, tags: [String] = []) {
         self.title = title
         self.message = message
         self.id = id
         self.date = date
         self.isFavorite = isFavorite
+        self.tags = tags
     }
     
     init(fromMemoreObject memoryObject: MemoryObject) {
@@ -30,6 +32,7 @@ class Memory: Codable, Hashable, Equatable {
         self.id = memoryObject.id ?? UUID()
         self.date = memoryObject.date ?? Date()
         self.isFavorite = memoryObject.isFavorite
+        self.tags = memoryObject.tags ?? []
     }
     
     required init(from decoder: Decoder) throws {
@@ -39,6 +42,7 @@ class Memory: Codable, Hashable, Equatable {
         self.message = (try? container.decode(String.self, forKey: .message)) ?? ""
         self.date = (try? container.decode(Date.self, forKey: .date)) ?? Date()
         self.isFavorite = (try? container.decode(Bool.self, forKey: .isFavorite)) ?? false
+        self.tags = (try? container.decode([String].self, forKey: .tags)) ?? []
     }
     
     enum CodingKeys: String, CodingKey {
@@ -47,6 +51,7 @@ class Memory: Codable, Hashable, Equatable {
         case message
         case date
         case isFavorite
+        case tags
     }
     
     public func hash(into hasher: inout Hasher) {
