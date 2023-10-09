@@ -40,16 +40,10 @@ struct DayRow_Previews: PreviewProvider {
     static var previews: some View {
         List {
             Section {
-//                DayRow(
-//                    title: "очень умное название и длинное",
-//                    date: "02.16.2022",
-//                    message: "Ну я пока все тут же. Из планов только «не праздновать следующий НГ в Казахстане, и в принципе не хотелось бы видеть снег на след новый год»"
-//                )
-
                 DayRow(
                     day: DayModel(
-                        title: "очень умное название и длинное",
-                        message: "Ну я пока все тут же. Из планов только «не праздновать следующий НГ в Казахстане, и в принципе не хотелось бы видеть снег на след новый год»",
+                        title: "Very clever title. And very-very looong",
+                        message: "Well, I'm still here. From plans only «not to celebrate the next New Year in Kazakhstan, and in principle would not like to see snow on the next New Year's Eve.»",
                         date: "02.16.2022",
                         id: UUID()
                     )

@@ -25,7 +25,7 @@ struct StatisticRow: View {
 struct StatisticRow_Previews: PreviewProvider {
     static var previews: some View {
         StatisticRow(
-            name: "Количество записей",
+            name: "Number of memories",
             value: "3"
         )
             .previewLayout(.fixed(width: 500, height: 120))
